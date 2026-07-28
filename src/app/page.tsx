@@ -1,9 +1,22 @@
-export default function Home() {
+import { Header } from "@/components/Header";
+import { Footer, AboutFooter } from "@/components/Footer";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { RecentProjectsSection } from "@/components/sections/RecentProjectsSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { ReviewsSection } from "@/components/sections/ReviewsSection";
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
+    <>
+      <Header variant="dark" />
+      <main>
+        <HeroSection />
+        <RecentProjectsSection />
+        <ServicesSection />
+        <ReviewsSection />
+        <AboutFooter />
+      </main>
+      <Footer />
+    </>
   );
 }
