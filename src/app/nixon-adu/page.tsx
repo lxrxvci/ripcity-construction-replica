@@ -9,7 +9,7 @@ import { NixonServicesSection } from "@/components/sections/NixonServicesSection
 import { NixonReviewsSection } from "@/components/sections/NixonReviewsSection";
 
 export const metadata: Metadata = {
-  title: "Nixon Basement ADU Conversion | Rip City Construction",
+  title: "Nixon ADU | Transform Your Space Today – Get Started Now",
   description:
     "A complete basement ADU conversion in Milwaukie, Oregon by Rip City Construction. Three bedrooms, two bathrooms, a full kitchen, custom woodwork, and flexible living space.",
 };

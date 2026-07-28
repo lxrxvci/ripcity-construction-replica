@@ -8,7 +8,7 @@ import { SoutheastHawthorneServicesSection } from "@/components/sections/Southea
 import { SoutheastHawthorneReviewsSection } from "@/components/sections/SoutheastHawthorneReviewsSection";
 
 export const metadata: Metadata = {
-  title: "SE Hawthorne, Portland Whole Home Addition | Rip City Construction",
+  title: "Southeast Portland Home Addition & Whole Home Remodel | Rip City Construction",
   description:
     "View this Southeast Hawthorne whole home addition and renovation by Rip City Construction. Expanded living spaces, custom primary suite, bathrooms, outdoor entertaining areas, and a complete exterior transformation.",
 };

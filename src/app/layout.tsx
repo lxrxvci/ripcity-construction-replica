@@ -17,7 +17,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
+  title: {
+    template: "%s — Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
+    default: "Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
+  },
   description:
     "Rip City Construction is a Portland remodeling contractor specializing in kitchen remodels, ADUs, home additions, bathrooms, basements, and whole-home renovations.",
   metadataBase: new URL("https://www.ripcityconstruction.com"),

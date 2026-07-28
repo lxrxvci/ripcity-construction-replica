@@ -7,7 +7,7 @@ import { AboutReviewsSection } from "@/components/sections/AboutReviewsSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Rip City Construction | Portland Remodeling Contractor",
+  title: "Portland Remodeling Contractor | Kitchens, ADUs & Additions | Rip City Construction",
   description:
     "Rip City Construction is a Portland remodeling contractor owned and operated by Cameron Taylor. Since 2012, we’ve built our business on quality craftsmanship, clear communication, and referrals.",
 };

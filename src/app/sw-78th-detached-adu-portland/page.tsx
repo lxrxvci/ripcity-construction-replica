@@ -9,7 +9,7 @@ import { Sw78thServicesSection } from "@/components/sections/Sw78thServicesSecti
 import { Sw78thReviewsSection } from "@/components/sections/Sw78thReviewsSection";
 
 export const metadata: Metadata = {
-  title: "SW 78th Detached ADU Construction | Portland ADU Builder — Rip City Construction",
+  title: "SW 76th Detached ADU Construction | Portland ADU Builder",
   description:
     "Explore this detached ADU construction project in Southwest Portland. Rip City Construction built this custom grandmother suite from the ground up, including new utilities, full kitchen, bathroom, bedroom, study, and living space.",
 };

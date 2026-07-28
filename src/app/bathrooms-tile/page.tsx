@@ -7,7 +7,7 @@ import { BathroomsTileServicesSection } from "@/components/sections/BathroomsTil
 import { BathroomsTileReviewsSection } from "@/components/sections/BathroomsTileReviewsSection";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling & Tile Portland | Rip City Construction",
+  title: "Bathroom Remodeling & Tile Portland | Rip City Const.",
   description:
     "Custom bathroom remodeling and tile installation in Portland, Oregon. Rip City Construction designs and builds durable, beautiful bathrooms with showers, vanities, and tilework.",
 };

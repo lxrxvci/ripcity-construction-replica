@@ -20,7 +20,7 @@ interface ImageCaptionEntry {
 }
 
 export const metadata: Metadata = {
-  title: "Commercial Remodels | Rip City Construction",
+  title: "Commercial Remodeling Portland | Rip City Construction",
   description:
     "View Rip City Construction's commercial remodeling project portfolio in Portland, Oregon. Quality craftsmanship for tenant improvements, build-outs, and more.",
 };

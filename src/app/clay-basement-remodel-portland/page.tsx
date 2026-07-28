@@ -35,7 +35,7 @@ const heroImageAlt =
   heroImage?.alt || "Finished basement family room and bedroom remodel in Southeast Portland.";
 
 export const metadata: Metadata = {
-  title: "SE Clay, Portland Basement Remodel | Rip City Construction",
+  title: "Portland Basement Remodel | Finished Basement Renovation & Living Space Addition",
   description:
     "View this Southeast Portland basement remodel by Rip City Construction. A finished basement with a new family room, bedroom, bathroom, laundry area, egress window, and modern finishes.",
 };

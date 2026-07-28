@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, AboutFooter, Footer } from "@/components/Footer";
 import { ADUHeroSection } from "@/components/sections/ADUHeroSection";
@@ -8,6 +9,10 @@ import { ADUGallerySection } from "@/components/sections/ADUGallerySection";
 import { AduHomeAdditionsPortlandServicesSection } from "@/components/sections/AduHomeAdditionsPortlandServicesSection";
 import { AduHomeAdditionsPortlandReviewsSection } from "@/components/sections/AduHomeAdditionsPortlandReviewsSection";
 import { AduHomeAdditionsPortlandBottomCtaSection } from "@/components/sections/AduHomeAdditionsPortlandBottomCtaSection";
+
+export const metadata: Metadata = {
+  title: "ADU Builder & Home Additions Portland | Rip City Const.",
+};
 
 export default function AduHomeAdditionsPortlandPage() {
   return (

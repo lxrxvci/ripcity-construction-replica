@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter, AboutFooter } from "@/components/Footer";
 import { Button } from "@/components/ui/Button";
@@ -8,6 +9,10 @@ import { HomeProjectsSection } from "@/components/sections/HomeProjectsSection";
 import { HomeServicesSection } from "@/components/sections/HomeServicesSection";
 import { HomeReviewsSection } from "@/components/sections/HomeReviewsSection";
 import { HomeCtaBottomSection } from "@/components/sections/HomeCtaBottomSection";
+
+export const metadata: Metadata = {
+  title: "Kitchen Remodeling Portland, OR | Rip City Construction",
+};
 
 export default function KitchenRemodelingPortlandPage() {
   return (

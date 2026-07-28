@@ -7,7 +7,7 @@ import { BasementsServicesSection } from "@/components/sections/BasementsService
 import { BasementsReviewsSection } from "@/components/sections/BasementsReviewsSection";
 
 export const metadata: Metadata = {
-  title: "Basement Finishing & Remodeling Portland | Rip City Construction",
+  title: "Basement Finishing & Remodeling Portland | Rip City Const.",
   description:
     "Convert unfinished basements into family rooms, home theaters, or guest suites in Portland, OR. Quality basement remodeling by Rip City Construction.",
 };
