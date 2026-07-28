@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 
-const STAGING = "https://ripcity-construction-replica-b6gejlm5k-lxrxvcis-projects.vercel.app";
+const STAGING = "https://ripcity-construction-replica-3rcb06mt4-lxrxvcis-projects.vercel.app";
 
 const pages = [
   "/", "/about", "/contact", "/services", "/portland-remodeling-projects",
