@@ -113,8 +113,8 @@ export function AboutFooter({ className, hideCtaButton }: AboutFooterProps) {
             </ul>
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
-                src="/images/ChatGPT_Image_Apr_29__2026__01_16_18_PM_acc7ebcf.png"
-                alt="Modern living room interior"
+                src="/images/JZ_1_bc59f714.png"
+                alt="Bright modern living room with open kitchen and built-in shelving by Rip City Construction"
                 fill
                 className="object-cover"
               />
