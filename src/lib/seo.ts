@@ -135,7 +135,8 @@ export function createOrganizationSchema() {
   return {
     "@type": "Organization",
     "@id": `${SITE.url}/#organization`,
-    name: SITE.legalName,
+    name: SITE.name,
+    legalName: SITE.legalName,
     url: SITE.url,
     logo: {
       "@type": "ImageObject",
