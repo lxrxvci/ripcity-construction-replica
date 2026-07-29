@@ -22,7 +22,7 @@ const galleryImages = (imageCaptions as ImageCaptionEntry[])
 
 export function NewBuildGallerySection() {
   return (
-    <section className="bg-background px-4 pb-12 pt-36 sm:px-6 md:pb-16 lg:px-10 lg:pb-20">
+    <section className="bg-background px-4 pb-12 sm:px-6 md:pb-16 lg:px-10 lg:pb-20">
       <div className="mx-auto max-w-7xl">
         <div className="columns-1 gap-3 sm:columns-2 md:gap-4 lg:columns-3">
           {galleryImages.map((image) => (

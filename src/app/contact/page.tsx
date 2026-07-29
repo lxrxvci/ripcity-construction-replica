@@ -1,29 +1,31 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
-import { CtaFooter, AboutFooter, Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { ContactFormSection } from "@/components/sections/ContactFormSection";
-import { ContactProjectsSection } from "@/components/sections/ContactProjectsSection";
-import { ContactServicesSection } from "@/components/sections/ContactServicesSection";
-import { ContactReviewsSection } from "@/components/sections/ContactReviewsSection";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { createContactPageSchema, createJsonLdGraph, createMetadata } from "@/lib/seo";
+import { PAGE_DESCRIPTIONS } from "@/lib/company";
 
-export const metadata: Metadata = {
-  title: "Contact Portland Remodeling Contractor | Rip City Construction",
-  description:
-    "Get in touch with Rip City Construction for a free estimate on your next kitchen, bathroom, ADU, addition, or basement remodeling project in Portland, Oregon.",
-};
+const pageTitle = "Contact Portland Remodeling Contractor";
+
+export const metadata: Metadata = createMetadata({
+  title: pageTitle,
+  description: PAGE_DESCRIPTIONS.contact,
+  path: "/contact",
+});
 
 export default function ContactPage() {
+  const jsonLd = createJsonLdGraph([createContactPageSchema()]);
+
   return (
     <>
       <Header variant="light" />
+      <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
       <main className="flex-1 pt-28 lg:pt-32">
+        <JsonLd schema={jsonLd} />
         <ContactFormSection />
-        <ContactProjectsSection />
-        <ContactServicesSection />
-        <ContactReviewsSection />
       </main>
-      <CtaFooter />
-      <AboutFooter />
       <Footer />
     </>
   );

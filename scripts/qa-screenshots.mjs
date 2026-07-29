@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 import fs from "fs";
 
-const STAGING = "https://ripcity-construction-replica-b6gejlm5k-lxrxvcis-projects.vercel.app";
+const STAGING = "https://ripcity-construction-replica-ohlgq9x02-lxrxvcis-projects.vercel.app";
 const OUT = "qa/screenshots";
 
 const pages = [

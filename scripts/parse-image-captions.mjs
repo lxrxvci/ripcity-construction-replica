@@ -11,6 +11,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 
 const SITEMAP_PATH = "docs/research/sitemap.xml";
 const MANIFEST_PATH = "docs/research/asset-manifest.json";
@@ -36,21 +37,13 @@ function sanitizeFilename(url) {
     pathname = pathname.replace(/\/+/g, "/").replace(/^\//, "");
     const segments = pathname.split("/").filter(Boolean);
     const lastSegment = segments[segments.length - 1] || "asset";
-    const hash = require("node:crypto")
-      .createHash("md5")
-      .update(url)
-      .digest("hex")
-      .slice(0, 8);
+    const hash = createHash("md5").update(url).digest("hex").slice(0, 8);
     const base = lastSegment.includes(".") ? lastSegment : `${lastSegment}_${hash}`;
     const ext = path.extname(base).toLowerCase();
     const name = path.basename(base, ext) || "asset";
     return `${name}_${hash}${ext || ""}`;
   } catch {
-    return `asset_${require("node:crypto")
-      .createHash("md5")
-      .update(url)
-      .digest("hex")
-      .slice(0, 8)}`;
+    return `asset_${createHash("md5").update(url).digest("hex").slice(0, 8)}`;
   }
 }
 

@@ -10,42 +10,42 @@ const services = [
   {
     title: "Kitchen Remodeling",
     description:
-      "Custom kitchen remodeling in Portland, including cabinetry, countertops, layout improvements, and full renovations built for long-term value.",
+      "From layout redesigns and open-concept conversions to custom cabinetry, countertops, tile, and lighting, we build kitchens around the way your household actually cooks and gathers. Every project is managed in-house from design through final walkthrough.",
     icon: "/images/Kitchen_Graphic_99ebdb00.png",
     href: "/kitchen-remodeling-portland",
   },
   {
     title: "Bathroom Remodeling",
     description:
-      "Bathroom remodeling in Portland with custom tile, showers, vanities, and layout upgrades designed for durability and everyday use.",
+      "Walk-in showers, soaking tubs, vanities, and precision tilework — we remodel bathrooms of every size with waterproofing and ventilation done right the first time, so the finishes stay beautiful for years.",
     icon: "/images/ChatGPT_Image_May_5__2026__03_30_40_PM_e5fc8657.png",
     href: "/bathrooms-tile",
   },
   {
     title: "ADU Construction",
     description:
-      "ADU construction in Portland, Oregon, including detached units and conversions for rental income, guest space, or multigenerational living.",
+      "Detached backyard cottages, garage conversions, and basement ADUs built to Portland code. We handle feasibility, permitting, and construction for units designed to house family or generate rental income.",
     icon: "/images/ADU_Graphic_724dacc9.png",
     href: "/adu-home-additions-portland",
   },
   {
     title: "Home Additions",
     description:
-      "Home additions in Portland designed to expand your living space with seamless design, structural integration, and quality construction.",
+      "Second stories, bump-outs, and full wings that tie into your existing structure cleanly — matching rooflines, siding, and interior finishes so the addition feels like it was always part of the house.",
     icon: "/images/Addition_Graphic_9cab53de.png",
     href: "/new-build",
   },
   {
     title: "Basement Finishing",
     description:
-      "Basement remodeling in Portland, turning unfinished space into functional living areas with custom layouts and quality finishes.",
+      "We turn damp, unfinished basements into warm, code-compliant living space: family rooms, guest suites, home offices, and theaters with proper moisture control, egress, and insulation.",
     icon: "/images/Basement_Graphic_ce30ad11.png",
     href: "/basements",
   },
   {
     title: "Commercial Remodeling",
     description:
-      "Commercial remodeling in Portland, including tenant improvements and build-outs designed for durability, efficiency, and long-term performance.",
+      "Tenant improvements, office and retail build-outs, and light commercial renovations completed on a schedule that keeps your business running. We coordinate directly with owners and property managers.",
     icon: "/images/Commercial_Graphic_389324fa.png",
     href: "/project-photoshop",
   },
@@ -58,11 +58,12 @@ export function ServicesListSection({ className }: ServicesListSectionProps) {
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-wider text-accent">Our Services</p>
           <h2 className="mt-4 font-heading text-3xl font-bold md:text-4xl">
-            Custom Home Remodeling in Portland, Oregon
+            What We Build for Portland Homeowners
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-foreground/80">
-            From kitchens and bathrooms to full home additions and ADUs, we provide professional
-            remodeling services in Portland designed to improve your space and add long-term value.
+            Every service below is delivered by our own Portland-based crew with one point of
+            contact, a clear schedule, and craftsmanship we stand behind. Select a service to see
+            detailed scope, process, and completed projects.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { ADDRESS, CONTACT, SITE } from "@/lib/company";
 
 interface CtaFooterProps {
   className?: string;
@@ -136,8 +137,35 @@ export function AboutFooter({ className, hideCtaButton }: AboutFooterProps) {
 
 export function Footer() {
   return (
-    <footer className="bg-foreground py-6 text-center text-xs text-background/60">
-      <p>&copy; {new Date().getFullYear()} Rip City Construction. All rights reserved.</p>
+    <footer className="bg-foreground py-8 text-center text-xs text-background/60">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <address className="not-italic">
+          <p className="font-semibold text-background/90">{SITE.legalName}</p>
+          <p className="mt-1">
+            {ADDRESS.streetAddress}, {ADDRESS.addressLocality}, {ADDRESS.addressRegion}{" "}
+            {ADDRESS.postalCode}
+          </p>
+          <p className="mt-1">
+            <a
+              href={`tel:${CONTACT.telephone}`}
+              className="underline-offset-2 hover:underline"
+            >
+              {CONTACT.telephoneDisplay}
+            </a>
+            <span className="mx-2">|</span>
+            <a
+              href={`mailto:${CONTACT.email}`}
+              className="underline-offset-2 hover:underline"
+            >
+              {CONTACT.email}
+            </a>
+          </p>
+          <p className="mt-1">Mon–Fri 8:00 AM – 5:00 PM</p>
+        </address>
+        <p className="mt-4">
+          &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }

@@ -10,7 +10,7 @@ const services = [
   {
     title: "Kitchen Remodeling",
     description:
-      "Custom kitchen remodeling in Portland, including cabinetry, countertops, layout improvements, and full renovations built for long-term value.",
+      "Full kitchen renovations from demo to final walkthrough — layout redesigns, cabinetry, countertops, tile, flooring, and lighting tailored to your home.",
     image: "/images/Burnside_Kitchen_1_86683ebd.png",
     href: "/kitchen-remodeling-portland",
   },

@@ -1,24 +1,46 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
-import { Footer, CtaFooter, AboutFooter } from "@/components/Footer";
+import { Footer, CtaFooter } from "@/components/Footer";
 import { Button } from "@/components/ui/Button";
 import { KitchenRemodelingPortlandHeroSection } from "@/components/sections/KitchenRemodelingPortlandHeroSection";
 import { KitchenRemodelingPortlandIntroSection } from "@/components/sections/KitchenRemodelingPortlandIntroSection";
 import { KitchenGallerySection } from "@/components/sections/KitchenGallerySection";
-import { HomeProjectsSection } from "@/components/sections/HomeProjectsSection";
-import { HomeServicesSection } from "@/components/sections/HomeServicesSection";
-import { HomeReviewsSection } from "@/components/sections/HomeReviewsSection";
-import { HomeCtaBottomSection } from "@/components/sections/HomeCtaBottomSection";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { createJsonLdGraph,
+  createMetadata,
+  createServiceSchema,
+  createWebPageSchema} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Kitchen Remodeling Portland, OR | Rip City Construction",
-};
+const pageTitle = "Kitchen Remodeling Portland, OR";
+const description =
+  "Expert kitchen remodeling in Portland, Oregon. Custom cabinetry, countertops, layouts, and full kitchen renovations by Rip City Construction.";
+
+export const metadata: Metadata = createMetadata({
+  title: pageTitle,
+  description,
+  path: "/kitchen-remodeling-portland"});
 
 export default function KitchenRemodelingPortlandPage() {
+  const path = "/kitchen-remodeling-portland";
+
+  const jsonLd = createJsonLdGraph([
+    createWebPageSchema({ path, title: pageTitle, description }),
+    createServiceSchema("kitchen"),
+  ]);
+
   return (
     <>
       <Header variant="dark" />
+      <Breadcrumbs
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+          { name: "Kitchen Remodeling", path: "/kitchen-remodeling-portland" },
+        ]}
+      />
       <main>
+        <JsonLd schema={jsonLd} />
         <KitchenRemodelingPortlandHeroSection />
         <KitchenRemodelingPortlandIntroSection />
         <KitchenGallerySection />
@@ -38,12 +60,7 @@ export default function KitchenRemodelingPortlandPage() {
           </div>
         </section>
 
-        <HomeProjectsSection />
-        <HomeServicesSection />
-        <HomeReviewsSection />
         <CtaFooter />
-        <AboutFooter />
-        <HomeCtaBottomSection />
       </main>
       <Footer />
     </>

@@ -46,7 +46,7 @@ export function AboutHeroSection({ className }: AboutHeroSectionProps) {
                 Owner & Founder
               </p>
               <h2 className="font-heading text-2xl font-bold text-foreground lg:text-3xl">
-                About Us
+                Meet Cameron Taylor
               </h2>
               <p className="text-sm leading-relaxed text-foreground/80">
                 Rip City Construction is owned and operated by Cameron Taylor. Since starting the

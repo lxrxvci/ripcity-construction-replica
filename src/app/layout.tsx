@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Manrope } from "next/font/google";
 import "./globals.css";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { createGlobalSchema } from "@/lib/seo";
+import { PAGE_DESCRIPTIONS, SITE } from "@/lib/company";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -16,14 +19,42 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s — Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
-    default: "Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
-  },
-  description:
-    "Rip City Construction is a Portland remodeling contractor specializing in kitchen remodels, ADUs, home additions, bathrooms, basements, and whole-home renovations.",
-  metadataBase: new URL("https://www.ripcityconstruction.com"),
+export const generateMetadata = (): Metadata => {
+  const isProduction = process.env.VERCEL_ENV === "production";
+
+  return {
+    metadataBase: new URL(SITE.url),
+    title: {
+      template: "%s | Rip City Construction",
+      default: "Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
+    },
+    description: PAGE_DESCRIPTIONS.home,
+    openGraph: {
+      siteName: SITE.name,
+      locale: SITE.locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: SITE.twitterHandle,
+    },
+    icons: {
+      icon: "/seo/favicon_735b103a.ico",
+      shortcut: "/seo/favicon_735b103a.ico",
+      apple: "/seo/favicon_735b103a.ico",
+    },
+    robots: {
+      index: isProduction,
+      follow: true,
+      googleBot: {
+        index: isProduction,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+  };
 };
 
 export default function RootLayout({
@@ -31,12 +62,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const globalSchema = createGlobalSchema();
+
   return (
     <html
       lang="en"
+      dir="ltr"
       className={`${poppins.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <JsonLd schema={globalSchema} />
+        {children}
+      </body>
     </html>
   );
 }
