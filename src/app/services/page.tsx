@@ -3,7 +3,6 @@ import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";
 import { ServicesHeroSection } from "@/components/sections/ServicesHeroSection";
 import { ServicesFeaturedSection } from "@/components/sections/ServicesFeaturedSection";
-import { ServicesListSection } from "@/components/sections/ServicesListSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { createJsonLdGraph,
@@ -35,7 +34,6 @@ export default function ServicesPage() {
         <JsonLd schema={jsonLd} />
         <ServicesHeroSection />
         <ServicesFeaturedSection />
-        <ServicesListSection />
         <CtaFooter />
       </main>
       <Footer />

@@ -42,6 +42,13 @@ const services = [
     image: "/images/41782933_2172806549458542_3972088585447800832_o_525fed99.jpg",
     href: "/new-build",
   },
+  {
+    title: "Commercial Remodeling",
+    description:
+      "Tenant improvements, office and retail build-outs, and light commercial renovations completed on schedule with minimal downtime.",
+    image: "/images/12246940_945227248883151_6762714107473264736_n_d97ce95c.jpg",
+    href: "/project-photoshop",
+  },
 ];
 
 export function ServicesFeaturedSection({ className }: ServicesFeaturedSectionProps) {

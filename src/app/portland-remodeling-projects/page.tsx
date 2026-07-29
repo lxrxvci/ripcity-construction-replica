@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProjectsHeroSection } from "@/components/sections/ProjectsHeroSection";
 import { ProjectsGridSection } from "@/components/sections/ProjectsGridSection";
+import { ServicesListSection } from "@/components/sections/ServicesListSection";
 import { ProjectsBottomCtaSection } from "@/components/sections/ProjectsBottomCtaSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
@@ -33,6 +34,7 @@ export default function PortlandRemodelingProjectsPage() {
         <JsonLd schema={jsonLd} />
         <ProjectsHeroSection />
         <ProjectsGridSection />
+        <ServicesListSection />
         <ProjectsBottomCtaSection />
       </main>
       <Footer />
