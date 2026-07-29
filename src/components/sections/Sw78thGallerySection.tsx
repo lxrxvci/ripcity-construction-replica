@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GalleryGrid } from "@/components/GalleryGrid";
 import { cn } from "@/lib/utils";
 
 interface Sw78thGallerySectionProps {
@@ -44,26 +44,7 @@ export function Sw78thGallerySection({ className }: Sw78thGallerySectionProps) {
   return (
     <section className={cn("bg-background py-12 lg:py-16", className)}>
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {galleryImages.map((image, index) => (
-            <div
-              key={image.src}
-              className={`relative overflow-hidden ${
-                index === 0 || index === 4 ? "sm:col-span-2 lg:col-span-2" : ""
-              }`}
-            >
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <GalleryGrid images={galleryImages} lgCols={4} />
       </div>
     </section>
   );

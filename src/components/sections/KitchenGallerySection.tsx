@@ -230,13 +230,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           {project.galleryImages.map((image, index) => (
             <div
               key={index}
-              className={cn(
-                "relative overflow-hidden",
-                project.galleryImages.length === 2 && "aspect-[4/3]",
-                project.galleryImages.length === 3 && index === 0 && "aspect-[4/3] sm:col-span-2",
-                project.galleryImages.length === 3 && index !== 0 && "aspect-[4/3]",
-                project.galleryImages.length === 4 && "aspect-[4/3]"
-              )}
+              className="relative aspect-[4/3] overflow-hidden"
             >
               <img
                 src={image.src}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GalleryGrid } from "@/components/GalleryGrid";
 import { cn } from "@/lib/utils";
 
 interface NixonGallerySectionProps {
@@ -65,9 +65,8 @@ const galleryImages = [
 ];
 
 export function NixonGallerySection({ className }: NixonGallerySectionProps) {
-  const [featured, second, third, ...rest] = galleryImages;
-  const bottomPair = rest.slice(0, 2);
-  const remaining = rest.slice(2);
+  const topImages = galleryImages.slice(0, 6);
+  const remaining = galleryImages.slice(6);
 
   return (
     <section className={cn("bg-background py-16 lg:py-24", className)}>
@@ -102,57 +101,10 @@ export function NixonGallerySection({ className }: NixonGallerySectionProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative col-span-2 aspect-[4/3] overflow-hidden">
-              <Image
-                src={featured.src}
-                alt={featured.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            {[second, third].map((image) => (
-              <div key={image.src} className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
-              </div>
-            ))}
-          </div>
+          <GalleryGrid images={topImages} lgCols={2} />
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-16">
-          {bottomPair.map((image) => (
-            <div key={image.src} className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, 50vw"
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {remaining.map((image) => (
-            <div key={image.src} className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-          ))}
-        </div>
+        <GalleryGrid images={remaining} lgCols={4} className="mt-12 lg:mt-16" />
       </div>
     </section>
   );

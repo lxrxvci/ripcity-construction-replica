@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GalleryGrid } from "@/components/GalleryGrid";
 import { cn } from "@/lib/utils";
 
 interface SEKitchenGallerySectionProps {
@@ -68,27 +68,7 @@ export function SEKitchenGallerySection({ className }: SEKitchenGallerySectionPr
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {galleryImages.map((image, index) => (
-              <div
-                key={image.src}
-                className={cn(
-                  "relative overflow-hidden",
-                  index === 0 ? "sm:col-span-2" : ""
-                )}
-              >
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid images={galleryImages} lgCols={2} />
         </div>
       </div>
     </section>

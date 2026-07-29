@@ -1,14 +1,9 @@
-import Image from "next/image";
+import { GalleryGrid, type GalleryGridImage } from "@/components/GalleryGrid";
 import { cn } from "@/lib/utils";
-
-interface GalleryImage {
-  src: string;
-  alt: string;
-}
 
 interface ClayBasementGallerySectionProps {
   className?: string;
-  images: GalleryImage[];
+  images: GalleryGridImage[];
 }
 
 export function ClayBasementGallerySection({
@@ -51,24 +46,7 @@ export function ClayBasementGallerySection({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {images.map((image, index) => (
-              <div
-                key={image.src}
-                className={cn("relative overflow-hidden", index === 0 ? "sm:col-span-2" : "")}
-              >
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid images={images} lgCols={2} />
         </div>
       </div>
     </section>

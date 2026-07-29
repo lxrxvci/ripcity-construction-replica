@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { GalleryGrid } from "@/components/GalleryGrid";
 
 const galleryImages = [
   {
@@ -81,24 +81,7 @@ export function HawthorneGallerySection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {galleryImages.map((image) => (
-              <div
-                key={image.src}
-                className={`relative overflow-hidden ${image.featured ? "sm:col-span-2" : ""}`}
-              >
-                <div className={`relative w-full ${image.featured ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes={image.featured ? "(max-width: 640px) 100vw, 50vw" : "(max-width: 640px) 100vw, 25vw"}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid images={galleryImages} lgCols={2} />
         </div>
       </div>
     </section>
