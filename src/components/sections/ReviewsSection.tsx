@@ -1,3 +1,13 @@
+/**
+ * Homepage reviews section.
+ *
+ * Why it exists: testimonial social proof before the footer CTA.
+ * How it works: copy from sections.json reviews block (eyebrow, heading,
+ * support, googleCtaLabel); cards map reviews.json (via lib/testimonials)
+ * stamping reviews.N.text/.author.
+ * How to change it: edit reviews.json (portal Reviews collection) and
+ * sections.json reviews block.
+ */
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import reviews from "@/content/reviews.json";

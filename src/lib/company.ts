@@ -1,3 +1,18 @@
+/**
+ * Business constants: the single source of truth for NAP, licenses, profiles, and service-page SEO data.
+ *
+ * Why it exists: metadata and JSON-LD across 17 routes must never
+ * disagree about who the business is.
+ * How it works: derives NAP display fields from src/content/site.json
+ * (the portal-managed site collection) and layers on technical constants
+ * (SITE url/domain/og, CONTACT hours, ADDRESS + geo, LICENSES,
+ * SOCIAL_PROFILES/SAME_AS, AREA_SERVED, KNOWS_ABOUT, SERVICE_PAGES per
+ * service keyword page, PAGE_DESCRIPTIONS per route), plus hours
+ * formatters for schema and display.
+ * How to change it: owner-editable NAP changes go in site.json (portal);
+ * technical SEO constants here. A new service page needs a SERVICE_PAGES
+ * and PAGE_DESCRIPTIONS entry.
+ */
 // Verified business data sourced from the original site www.ripcityconstruction.com
 // and Google Business Profile signals. Owner-editable NAP display fields live in
 // src/content/site.json (portal CMS collection "site"); this file derives the

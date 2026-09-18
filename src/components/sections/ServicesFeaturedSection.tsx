@@ -1,3 +1,13 @@
+/**
+ * Featured service cards on /services.
+ *
+ * Why it exists: the visual catalog of the four headline services.
+ * How it works: cards map services-featured.json stamping
+ * services-featured.N.title/.description/.image; the learn-more label is
+ * the shared services-page.featuredLearnMoreLabel stamp.
+ * How to change it: edit services-featured.json; the label in
+ * services-page.json.
+ */
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";

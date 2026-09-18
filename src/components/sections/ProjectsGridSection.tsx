@@ -1,3 +1,13 @@
+/**
+ * Projects index grid: the portfolio cards.
+ *
+ * Why it exists: the core of /portland-remodeling-projects.
+ * How it works: section copy from projects-page.json grid block; cards
+ * map projects-gallery.json stamping projects-gallery.N.title/.location/
+ * .paragraphs.N/.image, linking to each project page.
+ * How to change it: edit projects-gallery.json (portal Projects Gallery
+ * collection); grid copy in projects-page.json.
+ */
 import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon } from "@/components/icons";

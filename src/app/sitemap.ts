@@ -1,3 +1,13 @@
+/**
+ * sitemap.xml generator: the canonical route list with priorities.
+ *
+ * Why it exists: search engines discover the 17 routes from here; the
+ * list is curated (priority + changeFrequency per route).
+ * How it works: a static route array mapped to absolute URLs from
+ * SITE.url.
+ * How to change it: add new public routes here in the same change that
+ * adds the page - and to docs/CODE_GUIDE.md (check-docs gates the guide).
+ */
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/company";
 

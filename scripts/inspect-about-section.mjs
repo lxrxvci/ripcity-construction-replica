@@ -1,3 +1,13 @@
+/**
+ * One-off inspector: dumps the original homepage's about section markup.
+ *
+ * Why it exists: answered a specific extraction question (about section
+ * structure) during the clone.
+ * How it works: Playwright loads the original homepage and prints the
+ * section's HTML snippet.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 
 async function main() {

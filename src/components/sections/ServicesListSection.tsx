@@ -1,3 +1,13 @@
+/**
+ * Services cross-sell list on the projects page.
+ *
+ * Why it exists: routes portfolio browsers to service pages.
+ * How it works: copy from projects-page.json servicesList block; items
+ * map services-list.json stamping services-list.N.icon/.title/
+ * .description.
+ * How to change it: edit services-list.json and projects-page.json
+ * (portal collections).
+ */
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import servicesList from "@/content/services-list.json";

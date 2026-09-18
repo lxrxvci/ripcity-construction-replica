@@ -1,3 +1,14 @@
+/**
+ * Homepage services grid.
+ *
+ * Why it exists: routes homepage visitors into the five service pages.
+ * How it works: copy from sections.json services block (stamped
+ * sections.services.*); cards map services.json stamping services.N.title/
+ * .description/.image with learn-more links.
+ * How to change it: edit services.json and sections.json (portal
+ * collections). Card hrefs are code - they must match the service page
+ * routes.
+ */
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import services from "@/content/services.json";

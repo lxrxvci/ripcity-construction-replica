@@ -1,3 +1,12 @@
+/**
+ * Full-viewport hero for /adu-home-additions-portland.
+ *
+ * Why it exists: opens the ADU/additions service page.
+ * How it works: next/image background (SW 78th project photo), gradient
+ * scrim, headline/sub/CTA - inline copy replicating the original site;
+ * not portal-stamped.
+ * How to change it: edit copy and the image path here.
+ */
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";

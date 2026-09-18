@@ -1,3 +1,11 @@
+/**
+ * Hero for /projects/ne-36th-primary-suite-bathroom-remodel.
+ *
+ * Why it exists: opens the NE 36th suite project page.
+ * How it works: background photo + headline/intro, inline copy; not
+ * portal-stamped.
+ * How to change it: edit copy/images here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { MapPinIcon } from "@/components/icons";

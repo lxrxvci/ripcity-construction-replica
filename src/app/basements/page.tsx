@@ -1,3 +1,12 @@
+/**
+ * Basement finishing service page (/basements).
+ *
+ * Why it exists: service keyword page.
+ * How it works: ServiceIntroSection + BasementsGallerySection; Service +
+ * WebPage JSON-LD.
+ * How to change it: intro copy via the ServiceIntroSection props here;
+ * gallery images in BasementsGallerySection.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";

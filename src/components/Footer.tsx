@@ -1,3 +1,17 @@
+/**
+ * Site footer: CTA band with stats, about blurb, contact/NAP block, legal line.
+ *
+ * Why it exists: closing chrome on every page and the portal-managed
+ * home for the CTA + about copy.
+ * How it works: renders footer.json (cta block: heading, body, ctaLabel,
+ * stats[].{value,sub,label}, shieldImage), sections.json about block
+ * (eyebrow, heading, paragraphs[], linkLabel, whyHeading, bullets[]), and
+ * site.json NAP fields - all stamped; legal line is
+ * footer.rightsReserved.
+ * How to change it: edit footer.json / sections.json / site.json (or via
+ * the portal). Do not hardcode contact info here - it must stay in sync
+ * with site.json, which lib/company.ts derives schema from.
+ */
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";

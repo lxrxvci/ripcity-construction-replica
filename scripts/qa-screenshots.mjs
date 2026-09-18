@@ -1,3 +1,13 @@
+/**
+ * QA: screenshots every page of the staging deploy into qa/screenshots/.
+ *
+ * Why it exists: visual regression surface against the original during
+ * the clone's QA phase.
+ * How it works: Playwright visits each route on the hardcoded staging
+ * Vercel URL and saves a screenshot per page.
+ * How to change it: update the STAGING constant to the current deploy
+ * before running; not part of the build.
+ */
 import { chromium } from "playwright";
 import fs from "fs";
 

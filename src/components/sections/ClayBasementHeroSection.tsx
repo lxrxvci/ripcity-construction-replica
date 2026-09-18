@@ -1,3 +1,11 @@
+/**
+ * Hero for /clay-basement-remodel-portland.
+ *
+ * Why it exists: opens the Clay basement project page.
+ * How it works: background photo + headline/intro, inline copy; not
+ * portal-stamped.
+ * How to change it: edit copy/images here.
+ */
 import Image from "next/image";
 import { MapPinIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";

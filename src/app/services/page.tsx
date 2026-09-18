@@ -1,3 +1,14 @@
+/**
+ * Services index (/services): hero plus featured service cards.
+ *
+ * Why it exists: the hub that routes visitors to each service page.
+ * How it works: composes ServicesHeroSection and ServicesFeaturedSection
+ * (both stamped from services-page.json / services-featured.json);
+ * metadata plus OfferCatalog + WebPage JSON-LD.
+ * How to change it: edit services-page.json and services-featured.json;
+ * new services also need a SERVICE_PAGES entry in lib/company.ts for
+ * schema coverage.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";

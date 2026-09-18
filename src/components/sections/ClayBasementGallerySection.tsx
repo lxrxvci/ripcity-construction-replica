@@ -1,3 +1,10 @@
+/**
+ * Photo gallery on the Clay basement page.
+ *
+ * Why it exists: project photo proof.
+ * How it works: inline image array grid; not portal-stamped.
+ * How to change it: edit the image array here.
+ */
 import { GalleryGrid, type GalleryGridImage } from "@/components/GalleryGrid";
 import { cn } from "@/lib/utils";
 

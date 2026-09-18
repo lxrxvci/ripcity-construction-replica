@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-
 /**
  * Generates clone-website command/skill files for all supported AI coding platforms.
- * Source of truth: .claude/skills/clone-website/SKILL.md
  *
- * Usage: node scripts/sync-skills.mjs
+ * Why it exists: the cloner skill ships to many agent platforms (.claude,
+ * .cursor, etc.) from one source of truth.
+ * How it works: parses .claude/skills/clone-website/SKILL.md (frontmatter
+ * + body) and writes the per-platform command/skill variants. Run:
+ * node scripts/sync-skills.mjs
+ * How to change it: edit the SKILL.md source, then re-run. Do not edit
+ * the generated per-platform files by hand.
  */
-
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';

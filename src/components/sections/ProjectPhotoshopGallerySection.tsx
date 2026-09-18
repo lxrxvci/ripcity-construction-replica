@@ -1,3 +1,13 @@
+/**
+ * Prop-driven photo grid on /project-photoshop.
+ *
+ * Why it exists: the commercial project's visual proof; unlike most
+ * gallery sections the image list is a prop.
+ * How it works: maps the images prop ({src, alt}[]) to a 1/2/4-column
+ * next/image grid.
+ * How to change it: edit the images array in
+ * src/app/project-photoshop/page.tsx, not here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

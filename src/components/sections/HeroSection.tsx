@@ -1,3 +1,14 @@
+/**
+ * Homepage hero: full-viewport photo, headline lines, sub, CTA, license shield.
+ *
+ * Why it exists: the top conversion surface of the homepage.
+ * How it works: renders hero.json with stamps hero.image, hero.titleLines.N,
+ * hero.sub, hero.ctaLabel, hero.shieldImage over a full-bleed next/image
+ * with a gradient scrim.
+ * How to change it: edit hero.json (portal Hero collection). Keep the
+ * scrim from covering stamped nodes - the bridge selects what the owner
+ * clicks.
+ */
 import Image from "next/image";
 import { Fragment } from "react";
 import { Button } from "@/components/ui/Button";

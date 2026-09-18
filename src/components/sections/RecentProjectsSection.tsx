@@ -1,3 +1,14 @@
+/**
+ * Homepage recent-projects row: section copy plus project cards.
+ *
+ * Why it exists: portfolio proof high on the homepage.
+ * How it works: copy from sections.json recentProjects (eyebrow, support,
+ * ctaLabel, stamped sections.recentProjects.*); cards map projects.json
+ * stamping projects.N.title/.location/.image and linking to the project
+ * pages.
+ * How to change it: cards in projects.json (portal Projects collection);
+ * section copy in sections.json.
+ */
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";

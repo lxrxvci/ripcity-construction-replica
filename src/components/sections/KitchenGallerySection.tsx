@@ -1,3 +1,15 @@
+/**
+ * Kitchen project case studies: alternating feature blocks with galleries.
+ *
+ * Why it exists: the proof core of /kitchen-remodeling-portland -
+ * detailed write-ups of named kitchen projects.
+ * How it works: an inline KitchenProject[] array (title, subtitle,
+ * description, features[], featureImage, galleryImages[], imageRight for
+ * layout alternation) rendered as two-column feature rows with photo
+ * grids; not portal-stamped.
+ * How to change it: edit the projects array here. Keep alt text specific
+ * and local - it carries the page's image SEO.
+ */
 import { cn } from "@/lib/utils";
 
 interface ProjectImage {

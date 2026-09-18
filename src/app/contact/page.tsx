@@ -1,3 +1,12 @@
+/**
+ * Contact page (/contact): the inquiry form and direct contact block.
+ *
+ * Why it exists: the site's single lead-capture surface.
+ * How it works: renders ContactFormSection (Formspree-backed); metadata
+ * from PAGE_DESCRIPTIONS.contact plus createContactPageSchema JSON-LD.
+ * How to change it: form behavior lives in ContactFormSection; set
+ * NEXT_PUBLIC_FORMSPREE_FORM_ID to activate submissions.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";

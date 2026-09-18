@@ -1,3 +1,12 @@
+/**
+ * Bathroom and tile service page (/bathrooms-tile).
+ *
+ * Why it exists: service keyword page.
+ * How it works: ServiceIntroSection (prop-driven intro) +
+ * BathroomsTileGallerySection (inline gallery); Service + WebPage JSON-LD.
+ * How to change it: intro copy is the ServiceIntroSection props in this
+ * file; gallery images in the section component.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";

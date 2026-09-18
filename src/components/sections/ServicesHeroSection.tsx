@@ -1,3 +1,12 @@
+/**
+ * Services index hero (/services).
+ *
+ * Why it exists: introduces the service catalog.
+ * How it works: renders services-page.json hero block, stamped
+ * services-page.hero.heading/.support.
+ * How to change it: edit services-page.json (portal Services Page
+ * collection).
+ */
 import { cn } from "@/lib/utils";
 import servicesPage from "@/content/services-page.json";
 

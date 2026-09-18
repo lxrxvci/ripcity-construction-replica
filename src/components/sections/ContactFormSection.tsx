@@ -1,3 +1,14 @@
+/**
+ * Contact form and direct-contact block (/contact).
+ *
+ * Why it exists: the lead-capture surface; posts to Formspree.
+ * How it works: a two-column section - pitch + owner phone/email + social
+ * links on the left, the form on the right. The form action is
+ * formspree.io/f/NEXT_PUBLIC_FORMSPREE_FORM_ID with a placeholder
+ * fallback when the env var is unset. Copy is inline (not portal-stamped).
+ * How to change it: set NEXT_PUBLIC_FORMSPREE_FORM_ID to activate
+ * submissions; edit copy here. Keep the env-gated action pattern.
+ */
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { FacebookIcon, InstagramIcon, EmailIcon } from "@/components/icons";

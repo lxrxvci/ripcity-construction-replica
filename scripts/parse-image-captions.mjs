@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 /**
- * Parse sitemap.xml and build an image-caption mapping.
- * Output: docs/research/image-captions.json
+ * Builds docs/research/image-captions.json from the sitemap and asset manifest.
  *
- * Maps each downloaded local image path to:
- *  - original URL
- *  - page URLs where it appears
- *  - title and caption from the sitemap
+ * Why it exists: maps every downloaded image to its original URL, the
+ * pages it appears on, and its title/caption - the reference for writing
+ * faithful alt text.
+ * How it works: reads docs/research/sitemap.xml and asset-manifest.json,
+ * normalizes image URLs, and joins them into one caption mapping. Run:
+ * node scripts/parse-image-captions.mjs
+ * How to change it: research tooling, not part of the build; re-run after
+ * download-assets.mjs if the source site changed.
  */
-
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";

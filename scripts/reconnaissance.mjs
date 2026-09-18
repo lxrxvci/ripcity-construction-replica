@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * Reconnaissance script for ripcityconstruction.com clone.
+ * Reconnaissance crawl of the original site: screenshots, design tokens, page topology.
  *
- * For every page in the asset manifest, this script:
- *  - Captures desktop (1440px) and mobile (390px) full-page screenshots.
- *  - Extracts global design tokens (colors, typography, spacing, buttons).
- *  - Extracts the page topology: header, footer, and every Squarespace section.
- *  - For each section, records computed styles, text, images, backgrounds, and responsive changes.
- *  - Writes JSON data and a human-readable topology markdown file.
- *
- * Run with:
- *   node scripts/reconnaissance.mjs
+ * Why it exists: produced the extraction data (docs/research) and visual
+ * references (docs/design-references) the replica was built from.
+ * How it works: for every page in the asset manifest, captures 1440px and
+ * 390px full-page screenshots, extracts global design tokens (colors,
+ * typography, spacing, buttons), and records the topology of header,
+ * footer, and every Squarespace section with computed styles, text,
+ * images, backgrounds, and responsive changes. Run:
+ * node scripts/reconnaissance.mjs
+ * How to change it: one-shot research tooling; re-run only for a fresh
+ * extraction, and expect docs/research output churn.
  */
-
 import { chromium } from 'playwright';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';

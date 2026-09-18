@@ -1,3 +1,11 @@
+/**
+ * Nixon ADU project page (/nixon-adu).
+ *
+ * Why it exists: project proof page for the Nixon ADU conversion.
+ * How it works: NixonHeroSection + NixonGallerySection (inline); WebPage
+ * JSON-LD.
+ * How to change it: copy and images inline in the two sections.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";

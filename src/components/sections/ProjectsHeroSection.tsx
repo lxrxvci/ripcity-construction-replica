@@ -1,3 +1,12 @@
+/**
+ * Projects index hero (/portland-remodeling-projects).
+ *
+ * Why it exists: introduces the portfolio with a full-bleed image.
+ * How it works: renders projects-page.json hero block, stamped
+ * projects-page.hero.heading/.support/.ctaLabel/.image.
+ * How to change it: edit projects-page.json (portal Projects Page
+ * collection).
+ */
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";

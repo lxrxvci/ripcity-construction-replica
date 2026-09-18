@@ -1,3 +1,17 @@
+/**
+ * Metadata and JSON-LD builders for every route.
+ *
+ * Why it exists: centralizes Next metadata generation and schema.org
+ * graphs so pages stay one createMetadata + one create*Schema call each.
+ * How it works: createMetadata builds title/description/canonical/OG from
+ * lib/company constants; the create*Schema functions build WebPage,
+ * Breadcrumb, Organization, LocalBusiness, WebSite, Service, OfferCatalog,
+ * ContactPage, AboutPage, and ImageGallery nodes; createGlobalSchema is
+ * the sitewide graph rendered in layout.tsx; serializeJsonLd stringifies
+ * for JsonLd; breadcrumb helpers build item lists.
+ * How to change it: extend builders here when a page type needs new
+ * schema; keep every NAP reference flowing from lib/company.ts.
+ */
 import type { Metadata } from "next";
 import {
   ADDRESS,

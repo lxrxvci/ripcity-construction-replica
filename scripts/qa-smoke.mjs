@@ -1,3 +1,13 @@
+/**
+ * QA smoke test: every staging route must load with a non-empty title and no console/request errors.
+ *
+ * Why it exists: caught broken routes on the staging deploy during the
+ * clone's QA phase.
+ * How it works: Playwright visits each route on the hardcoded staging
+ * URL, asserts a title, and collects console and request failures.
+ * How to change it: update the STAGING constant to the current deploy
+ * before running; not part of the build.
+ */
 import { chromium } from "playwright";
 
 const STAGING = "https://ripcity-construction-replica-3rcb06mt4-lxrxvcis-projects.vercel.app";

@@ -1,3 +1,12 @@
+/**
+ * SE Portland kitchen renovation project page.
+ *
+ * Why it exists: project-specific proof page ranking for neighborhood +
+ * project-type searches.
+ * How it works: SEKitchenHeroSection + SEKitchenGallerySection (inline);
+ * WebPage JSON-LD.
+ * How to change it: copy and images inline in the two sections.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, Footer } from "@/components/Footer";

@@ -1,3 +1,16 @@
+/**
+ * Site header: absolute overlay nav with dark/light variants and a mobile menu.
+ *
+ * Why it exists: global chrome; sits over each page's hero (the original
+ * site has no solid bar).
+ * How it works: "use client" for the mobile-open state; logo and nav
+ * links render from header.json with data-cms header.logo and
+ * header.navLinks.N.label stamps; social icons come from icons.tsx; the
+ * variant prop flips text color for light/dark hero backgrounds.
+ * How to change it: nav labels/logo in header.json (portal Header &
+ * Navigation collection); link hrefs are code. Match variant to the
+ * page's hero darkness when adding pages.
+ */
 "use client";
 
 import { useState } from "react";

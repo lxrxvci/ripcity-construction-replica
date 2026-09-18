@@ -1,3 +1,14 @@
+/**
+ * Responsive image grid used by gallery sections.
+ *
+ * Why it exists: one grid layout for the many photo galleries instead of
+ * repeating grid classes per section.
+ * How it works: maps an images prop ({src, alt}[]) to next/image tiles in
+ * a 2/3/4-column lg layout (lgCols prop).
+ * How to change it: pass images from the calling section. Not stamped -
+ * stamps belong on the section's own content, and gallery imagery here is
+ * inline site copy.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

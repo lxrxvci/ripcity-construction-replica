@@ -1,3 +1,13 @@
+/**
+ * One-off inspector: counts homepage images and lists the ChatGPT/CTA images on the original site.
+ *
+ * Why it exists: separated generated/CTA graphics from photos during the
+ * clone's image audit.
+ * How it works: Playwright loads the original homepage and prints image
+ * counts plus the filtered CTA image list.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 
 async function main() {

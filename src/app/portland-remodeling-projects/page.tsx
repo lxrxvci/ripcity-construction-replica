@@ -1,3 +1,15 @@
+/**
+ * Projects index (/portland-remodeling-projects): hero, project grid, services cross-sell, bottom CTA.
+ *
+ * Why it exists: the portfolio hub - the strongest proof surface for a
+ * remodeler.
+ * How it works: composes ProjectsHeroSection, ProjectsGridSection
+ * (projects-gallery.json cards), ServicesListSection, and
+ * ProjectsBottomCtaSection - all stamped from projects-page.json,
+ * projects-gallery.json, services-list.json. WebPage JSON-LD.
+ * How to change it: project cards in projects-gallery.json; section copy
+ * in projects-page.json.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";

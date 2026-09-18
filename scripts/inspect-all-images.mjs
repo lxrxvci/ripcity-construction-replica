@@ -1,3 +1,12 @@
+/**
+ * One-off inspector: lists every image URL on the original homepage.
+ *
+ * Why it exists: image inventory during the clone extraction.
+ * How it works: Playwright loads the original homepage and prints the
+ * collected image URLs as JSON.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 
 async function main() {

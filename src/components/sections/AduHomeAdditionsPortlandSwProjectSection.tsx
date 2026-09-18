@@ -1,3 +1,13 @@
+/**
+ * SW 78th ADU project feature on the ADU service page.
+ *
+ * Why it exists: cross-links the service page to a finished ADU project
+ * as proof.
+ * How it works: inline feature layout (image + project summary + link to
+ * /sw-78th-detached-adu-portland); not portal-stamped.
+ * How to change it: edit copy/images here; keep the project link in sync
+ * with the route.
+ */
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 

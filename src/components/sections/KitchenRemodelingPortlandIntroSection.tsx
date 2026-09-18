@@ -1,3 +1,10 @@
+/**
+ * Intro copy block on the kitchen service page.
+ *
+ * Why it exists: positions the kitchen offer before the project features.
+ * How it works: inline heading + paragraphs; not portal-stamped.
+ * How to change it: edit copy here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

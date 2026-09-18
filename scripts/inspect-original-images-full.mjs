@@ -1,3 +1,13 @@
+/**
+ * One-off inspector: full image inventory of the original homepage, saved to qa/original-images.json.
+ *
+ * Why it exists: the complete image audit (post-scroll, so lazy-loaded
+ * images are included) used to plan downloads.
+ * How it works: Playwright at 1440x900 scrolls to the bottom, collects
+ * every image, writes qa/original-images.json.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 import fs from "fs";
 

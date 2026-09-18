@@ -1,3 +1,11 @@
+/**
+ * Bottom CTA band on the projects page.
+ *
+ * Why it exists: closing conversion ask after the portfolio.
+ * How it works: renders projects-page.json bottomCta block, stamped
+ * projects-page.bottomCta.heading/.body/.ctaLabel/.image.
+ * How to change it: edit projects-page.json.
+ */
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
