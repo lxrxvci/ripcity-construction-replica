@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Kitchen Remodel",
+    "location": "SE 76th, Portland",
+    "image": "/images/76th_Cover_c8ba1131.png",
+    "href": "/se-portland-kitchen-home-renovation"
+  },
+  {
+    "title": "ADU Build",
+    "location": "SW 78th, Portland",
+    "image": "/images/SW_78th_A1_74dff086.png",
+    "href": "/sw-78th-detached-adu-portland"
+  },
+  {
+    "title": "Home Addition",
+    "location": "SE Portland",
+    "image": "/images/ChatGPT_Image_Apr_29__2026__01_16_18_PM_de08f472.png",
+    "href": "/southeast-hawthorne-addition"
+  },
+  {
+    "title": "Basement Remodel",
+    "location": "SE Clay st, Portland",
+    "image": "/images/Clay_Basment_1_02f3c0cf.png",
+    "href": "/clay-basement-remodel-portland"
+  },
+  {
+    "title": "Bathroom Remodel",
+    "location": "NE 36th, Portland",
+    "image": "/images/ChatGPT_Image_Apr_29__2026__01_05_28_PM_f3761e34.png",
+    "href": "/projects/ne-36th-primary-suite-bathroom-remodel"
+  }
+]

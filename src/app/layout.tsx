@@ -4,6 +4,7 @@ import "./globals.css";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { createGlobalSchema } from "@/lib/seo";
 import { PAGE_DESCRIPTIONS, SITE } from "@/lib/company";
+import { PREVIEW_BRIDGE } from "@/lib/preview-bridge";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -71,6 +72,9 @@ export default function RootLayout({
       className={`${poppins.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        {/* Agentic PNW portal preview bridge v4: raw inline script, first
+            child of <body> so it is listening before paint. Never next/script. */}
+        <script dangerouslySetInnerHTML={{ __html: PREVIEW_BRIDGE }} />
         <JsonLd schema={globalSchema} />
         {children}
       </body>

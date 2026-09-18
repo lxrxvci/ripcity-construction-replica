@@ -5,20 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { FacebookIcon, InstagramIcon, EmailIcon, MenuIcon, XIcon } from "./icons";
+import header from "@/content/header.json";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/portland-remodeling-projects", label: "Projects" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
-const socialLinks = [
-  { href: "https://www.facebook.com/pages/Rip-City-Construction-Remodeling/127869977285553?ref=hl", icon: FacebookIcon, label: "Facebook" },
-  { href: "http://instagram.com/ripcityconstruction", icon: InstagramIcon, label: "Instagram" },
-  { href: "mailto:info@ripcityconstruction.com", icon: EmailIcon, label: "Email" },
-];
+const socialIcons = [FacebookIcon, InstagramIcon, EmailIcon];
 
 interface HeaderProps {
   className?: string;
@@ -43,18 +32,19 @@ export function Header({ className, variant = "dark" }: HeaderProps) {
         {/* Logo */}
         <Link href="/" className="relative z-10 flex-shrink-0">
           <Image
-            src="/images/Logo_Web_9e9745e2.png"
-            alt="Rip City Construction"
+            src={header.logo}
+            alt={header.logoAlt}
             width={100}
             height={100}
             className="h-20 w-auto lg:h-24"
             priority
+            data-cms="header.logo"
           />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((link) => (
+          {header.navLinks.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
@@ -62,6 +52,7 @@ export function Header({ className, variant = "dark" }: HeaderProps) {
                 "font-heading text-sm font-medium uppercase tracking-wider transition-colors",
                 hoverColor
               )}
+              data-cms={`header.navLinks.${i}.label`}
             >
               {link.label}
             </Link>
@@ -71,8 +62,8 @@ export function Header({ className, variant = "dark" }: HeaderProps) {
         {/* Desktop Social + Mobile Toggle */}
         <div className="flex items-center gap-4">
           <div className="hidden items-center gap-3 lg:flex">
-            {socialLinks.map((social) => {
-              const Icon = social.icon;
+            {header.socialLinks.map((social, i) => {
+              const Icon = socialIcons[i];
               return (
                 <a
                   key={social.label}
@@ -103,19 +94,20 @@ export function Header({ className, variant = "dark" }: HeaderProps) {
       {mobileOpen && (
         <div className="bg-foreground/95 text-background lg:hidden">
           <nav className="flex flex-col items-center gap-6 px-6 py-8">
-            {navLinks.map((link) => (
+            {header.navLinks.map((link, i) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="font-heading text-lg font-medium uppercase tracking-wider"
                 onClick={() => setMobileOpen(false)}
+                data-cms={`header.navLinks.${i}.label`}
               >
                 {link.label}
               </Link>
             ))}
             <div className="flex items-center gap-6 pt-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
+              {header.socialLinks.map((social, i) => {
+                const Icon = socialIcons[i];
                 return (
                   <a
                     key={social.label}

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Kitchen Remodeling",
+    "description": "From layout redesigns and open-concept conversions to custom cabinetry, countertops, tile, and lighting, we build kitchens around the way your household actually cooks and gathers. Every project is managed in-house from design through final walkthrough.",
+    "icon": "/images/Kitchen_Graphic_99ebdb00.png",
+    "href": "/kitchen-remodeling-portland"
+  },
+  {
+    "title": "Bathroom Remodeling",
+    "description": "Walk-in showers, soaking tubs, vanities, and precision tilework — we remodel bathrooms of every size with waterproofing and ventilation done right the first time, so the finishes stay beautiful for years.",
+    "icon": "/images/ChatGPT_Image_May_5__2026__03_30_40_PM_e5fc8657.png",
+    "href": "/bathrooms-tile"
+  },
+  {
+    "title": "ADU Construction",
+    "description": "Detached backyard cottages, garage conversions, and basement ADUs built to Portland code. We handle feasibility, permitting, and construction for units designed to house family or generate rental income.",
+    "icon": "/images/ADU_Graphic_724dacc9.png",
+    "href": "/adu-home-additions-portland"
+  },
+  {
+    "title": "Home Additions",
+    "description": "Second stories, bump-outs, and full wings that tie into your existing structure cleanly — matching rooflines, siding, and interior finishes so the addition feels like it was always part of the house.",
+    "icon": "/images/Addition_Graphic_9cab53de.png",
+    "href": "/new-build"
+  },
+  {
+    "title": "Basement Finishing",
+    "description": "We turn damp, unfinished basements into warm, code-compliant living space: family rooms, guest suites, home offices, and theaters with proper moisture control, egress, and insulation.",
+    "icon": "/images/Basement_Graphic_ce30ad11.png",
+    "href": "/basements"
+  },
+  {
+    "title": "Commercial Remodeling",
+    "description": "Tenant improvements, office and retail build-outs, and light commercial renovations completed on a schedule that keeps your business running. We coordinate directly with owners and property managers.",
+    "icon": "/images/Commercial_Graphic_389324fa.png",
+    "href": "/project-photoshop"
+  }
+]

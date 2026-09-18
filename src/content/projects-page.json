@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "heading": "Portland Remodeling Projects",
+    "support": "Explore kitchen remodels, bathroom renovations, ADU construction, basement finishing, and home additions completed throughout Portland and surrounding areas.",
+    "ctaLabel": "Request a Walkthrough",
+    "ctaHref": "/contact",
+    "image": "/images/ChatGPT_Image_May_19__2026__02_32_47_PM_0c742e4d.png",
+    "imageAlt": "Portland remodeling projects by Rip City Construction"
+  },
+  "grid": {
+    "eyebrow": "Featured Projects",
+    "heading": "Remodeling Projects Throughout Portland",
+    "support": "A collection of kitchen remodels, bathroom renovations, ADUs, home additions, and basement finishing projects completed by Rip City Construction.",
+    "galleryLinkLabel": "View Project Gallery →"
+  },
+  "servicesList": {
+    "eyebrow": "Our Services",
+    "heading": "What We Build for Portland Homeowners",
+    "support": "Every service below is delivered by our own Portland-based crew with one point of contact, a clear schedule, and craftsmanship we stand behind. Select a service to see detailed scope, process, and completed projects.",
+    "learnMoreLabel": "Learn more →"
+  },
+  "bottomCta": {
+    "heading": "Ready to Start Your Project?",
+    "body": "Let's talk about your project and get you a clear plan moving forward.",
+    "ctaLabel": "Request a Consultation",
+    "ctaHref": "/contact",
+    "image": "/images/ChatGPT_Image_Apr_29__2026__01_16_18_PM_acc7ebcf.png",
+    "imageAlt": "Portland home interior"
+  }
+}

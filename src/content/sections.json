@@ -1,0 +1,44 @@
+{
+  "recentProjects": {
+    "eyebrow": "Recent Projects",
+    "support": "A selection of kitchen remodels, bathrooms, ADUs, additions, and basement finishing projects completed throughout Portland, Oregon.",
+    "ctaLabel": "View Projects >",
+    "ctaHref": "/portland-remodeling-projects"
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "heading": "Custom Home Remodeling in Portland, Oregon",
+    "support": "From kitchens and bathrooms to full home additions and ADUs, we provide professional remodeling services in Portland designed to improve your space and add long-term value.",
+    "learnMoreLabel": "Learn More →"
+  },
+  "reviews": {
+    "eyebrow": "Client Reviews",
+    "heading": "What Homeowners Are Saying",
+    "support": "We’ve built our business on referrals, repeat clients, and quality remodeling work throughout Portland and surrounding areas.",
+    "googleCtaLabel": "Read More Reviews on Google →",
+    "googleCtaHref": "https://www.google.com/search?q=Rip+City+Construction+reviews"
+  },
+  "about": {
+    "eyebrow": "About Rip City Construction",
+    "heading": "Portland Remodeling Built on Quality Craftsmanship.",
+    "paragraphs": [
+      "Rip City Construction is a Portland remodeling contractor specializing in kitchen remodeling, bathroom renovations, ADU construction, home additions, basement finishing, and full residential remodeling throughout Portland and surrounding areas. Since 2012, we've built our business on quality workmanship, clear communication, and referrals from satisfied homeowners.",
+      "Our goal is to make the remodeling process organized, transparent, and well-managed from start to finish while delivering high-quality results built to last."
+    ],
+    "linkLabel": "Learn More About Us →",
+    "linkHref": "/about",
+    "whyHeading": "Why Homeowners Choose Us",
+    "bullets": [
+      "Licensed & Insured",
+      "Family-Owned Since 2012",
+      "Portland Owned & Operated",
+      "Kitchens, Bathrooms & ADUs",
+      "Clear Communication",
+      "Built on Referrals & Repeat Clients"
+    ],
+    "image": "/images/JZ_1_bc59f714.png",
+    "imageAlt": "Bright modern living room with open kitchen and built-in shelving by Rip City Construction",
+    "ctaLabel": "Request a Consultation",
+    "ctaHref": "/contact"
+  }
+}

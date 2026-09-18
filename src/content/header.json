@@ -1,0 +1,16 @@
+{
+  "logo": "/images/Logo_Web_9e9745e2.png",
+  "logoAlt": "Rip City Construction",
+  "navLinks": [
+    { "href": "/", "label": "Home" },
+    { "href": "/portland-remodeling-projects", "label": "Projects" },
+    { "href": "/services", "label": "Services" },
+    { "href": "/about", "label": "About" },
+    { "href": "/contact", "label": "Contact" }
+  ],
+  "socialLinks": [
+    { "href": "https://www.facebook.com/pages/Rip-City-Construction-Remodeling/127869977285553?ref=hl", "label": "Facebook" },
+    { "href": "http://instagram.com/ripcityconstruction", "label": "Instagram" },
+    { "href": "mailto:info@ripcityconstruction.com", "label": "Email" }
+  ]
+}
