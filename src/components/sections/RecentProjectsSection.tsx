@@ -34,7 +34,7 @@ export function RecentProjectsSection() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   data-cms={`projects.${i}.image`}
