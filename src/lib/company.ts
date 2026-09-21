@@ -140,6 +140,7 @@ export const PAGE_DESCRIPTIONS = {
     "Get in touch with Rip City Construction for a free estimate on your next kitchen, bathroom, ADU, addition, or basement remodeling project in Portland, Oregon.",
   projects:
     "View Rip City Construction's portfolio of kitchen remodels, bathroom renovations, ADUs, home additions, and basement finishing projects throughout Portland, Oregon.",
+  blog: "Remodeling lessons, permit guidance, and project notes from Rip City Construction kitchen, bathroom, basement, and ADU projects across Portland, Oregon.",
 } as const;
 
 export function hoursToOpeningHoursSpec() {

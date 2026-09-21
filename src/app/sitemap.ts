@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/company";
+import { allPosts } from "@/lib/posts";
 
 const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
@@ -19,6 +20,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/sw-78th-detached-adu-portland", priority: 0.7, changeFrequency: "monthly" },
   { path: "/nixon-adu", priority: 0.7, changeFrequency: "monthly" },
   { path: "/clay-basement-remodel-portland", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -29,10 +31,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const now = new Date();
 
-  return routes.map((route) => ({
+  const staticEntries: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${SITE.url}${route.path}`,
     lastModified: now,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
+
+  const postEntries: MetadataRoute.Sitemap = allPosts().map((post) => ({
+    url: `${SITE.url}/blog/${post.slug}`,
+    lastModified: new Date(`${post.updated}T00:00:00Z`),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...postEntries];
 }

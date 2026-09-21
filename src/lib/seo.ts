@@ -306,6 +306,98 @@ export function createJsonLdGraph(
   };
 }
 
+export function createBlogSchema({ name, description }: { name: string; description: string }) {
+  return {
+    "@type": "Blog",
+    "@id": `${SITE.url}/blog#blog`,
+    url: `${SITE.url}/blog`,
+    name,
+    description,
+    publisher: { "@id": `${SITE.url}/#organization` },
+    inLanguage: "en-US",
+  };
+}
+
+export function createBlogCollectionPageSchema({
+  path,
+  title,
+  description,
+  postUrls,
+}: {
+  path: string;
+  title: string;
+  description: string;
+  postUrls: string[];
+}) {
+  return {
+    "@type": "CollectionPage",
+    "@id": `${SITE.url}${path}#webpage`,
+    url: `${SITE.url}${path}`,
+    name: title,
+    description,
+    isPartOf: { "@id": `${SITE.url}/#website` },
+    mainEntity: { "@id": `${SITE.url}/blog#blog` },
+    hasPart: postUrls.map((url) => ({ "@type": "BlogPosting", url })),
+    inLanguage: "en-US",
+  };
+}
+
+export function createBlogPostingSchema({
+  path,
+  title,
+  description,
+  datePublished,
+  dateModified,
+  image,
+  keywords,
+}: {
+  path: string;
+  title: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  image: string;
+  keywords: string[];
+}) {
+  return {
+    "@type": "BlogPosting",
+    "@id": `${SITE.url}${path}#post`,
+    url: `${SITE.url}${path}`,
+    headline: title,
+    description,
+    datePublished,
+    dateModified,
+    image: {
+      "@type": "ImageObject",
+      url: image,
+    },
+    author: { "@id": `${SITE.url}/#organization` },
+    publisher: { "@id": `${SITE.url}/#organization` },
+    isPartOf: { "@id": `${SITE.url}/blog#blog` },
+    mainEntityOfPage: { "@id": `${SITE.url}${path}#webpage` },
+    keywords: keywords.join(", "),
+    inLanguage: "en-US",
+  };
+}
+
+export function createFaqPageSchema(
+  path: string,
+  entries: { question: string; answerHtml: string }[]
+) {
+  return {
+    "@type": "FAQPage",
+    "@id": `${SITE.url}${path}#faq`,
+    mainEntity: entries.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: entry.answerHtml,
+      },
+    })),
+  };
+}
+
 export function serializeJsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c").replace(/>/g, "\\u003e");
 }
