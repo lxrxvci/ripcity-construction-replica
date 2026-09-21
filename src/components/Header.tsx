@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/portland-remodeling-projects", label: "Projects" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
