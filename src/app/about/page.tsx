@@ -1,3 +1,14 @@
+/**
+ * About page (/about): story hero plus About schema.
+ *
+ * Why it exists: trust page for a referral-driven contractor.
+ * How it works: renders AboutHeroSection (inline copy replicating the
+ * original site); metadata from PAGE_DESCRIPTIONS.about plus
+ * createAboutPageSchema JSON-LD.
+ * How to change it: body copy lives in AboutHeroSection (inline, not
+ * portal-stamped); footer/about portal copy is sections.about in
+ * sections.json, which the Footer renders on every page.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, Footer } from "@/components/Footer";

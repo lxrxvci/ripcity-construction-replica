@@ -1,3 +1,17 @@
+/**
+ * Blog article section: masthead (date, tags, h1), optional cover, and
+ * the post's html body.
+ *
+ * Why it exists: the rendered article on /blog/[slug].
+ * How it works: dark masthead band keeps the absolute overlay header
+ * readable; the body is post.html (clean semantic HTML per the contract
+ * in lib/posts.ts) injected into a wrapper whose arbitrary-variant
+ * classes style p/h2/h3/ul/a/strong descendants, since the stored html
+ * carries no classes by design.
+ * How to change it: typography and layout here; content never (posts are
+ * data in src/content/posts.json). Keep the wrapper classes in sync with
+ * the tags the contract allows.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { formatPostDate, type Post } from "@/lib/posts";

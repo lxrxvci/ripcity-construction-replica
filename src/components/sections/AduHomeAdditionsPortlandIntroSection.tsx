@@ -1,3 +1,11 @@
+/**
+ * Intro copy block on the ADU/additions page.
+ *
+ * Why it exists: explains the ADU/addition offer between the hero and the
+ * project features.
+ * How it works: inline heading + paragraphs; not portal-stamped.
+ * How to change it: edit copy here.
+ */
 import { cn } from "@/lib/utils";
 
 interface AduHomeAdditionsPortlandIntroSectionProps {

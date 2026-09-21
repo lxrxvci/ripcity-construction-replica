@@ -1,3 +1,12 @@
+/**
+ * Nixon ADU project feature on the ADU service page.
+ *
+ * Why it exists: second project proof block, alternating layout with the
+ * SW 78th feature.
+ * How it works: inline feature layout linking to /nixon-adu; not
+ * portal-stamped.
+ * How to change it: edit copy/images here.
+ */
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 

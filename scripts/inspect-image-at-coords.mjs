@@ -1,3 +1,13 @@
+/**
+ * One-off inspector: identifies which image sits at given viewport coordinates on the original homepage.
+ *
+ * Why it exists: located a visually-identified image in the DOM during
+ * the clone (scroll, then elementFromPoint style lookup).
+ * How it works: Playwright at 1440x900 scrolls the original homepage and
+ * reports the element/image at the target offset.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 import fs from "fs";
 

@@ -1,3 +1,14 @@
+/**
+ * Homepage (/): hero, recent projects, services, reviews.
+ *
+ * Why it exists: the primary ranking and conversion surface.
+ * How it works: composes HeroSection, RecentProjectsSection,
+ * ServicesSection, ReviewsSection (all portal-stamped), with metadata
+ * from PAGE_DESCRIPTIONS.home and a WebPage + OfferCatalog JSON-LD graph.
+ * How to change it: copy and images live in hero.json, sections.json,
+ * projects.json, services.json, reviews.json - edit those, not this file.
+ * Section order changes happen here.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, AboutFooter } from "@/components/Footer";

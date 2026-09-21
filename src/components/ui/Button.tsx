@@ -1,3 +1,13 @@
+/**
+ * The site's button: variant + size system, renders as anchor when href is passed.
+ *
+ * Why it exists: one CTA style across heroes and sections.
+ * How it works: forwardRef button with primary/secondary/outline/ghost
+ * variants and sm/md/lg sizes composed via cn(); with href it renders an
+ * <a> with the same classes.
+ * How to change it: use <Button href=...> for links. Chrome only - never
+ * put data-cms stamps or content copy in this component.
+ */
 import * as React from "react";
 import { cn } from "@/lib/utils";
 

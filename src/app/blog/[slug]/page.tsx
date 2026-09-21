@@ -1,3 +1,16 @@
+/**
+ * /blog/[slug] route: one SSG page per post in src/content/posts.json.
+ *
+ * Why it exists: the article view; new posts receive routes at build time
+ * with zero code changes (dynamicParams = false, unknown slugs 404).
+ * How it works: generateStaticParams from allPosts(); per-post
+ * createMetadata (og:type article, cover as the OG image); a JSON-LD
+ * graph of WebPage + BlogPosting, plus FAQPage when the post html carries
+ * an FAQ section (lib/faq.ts); BlogPostArticleSection between the global
+ * chrome. BreadcrumbList comes from the Breadcrumbs component.
+ * How to change it: never for a new post (append to posts.json). Layout
+ * changes go in BlogPostArticleSection; schema changes in lib/seo.ts.
+ */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";

@@ -1,3 +1,11 @@
+/**
+ * Photo gallery on /basements.
+ *
+ * Why it exists: visual proof of basement finishing work.
+ * How it works: inline image array (public/images paths + alts) in a
+ * responsive grid; not portal-stamped.
+ * How to change it: edit the image array here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

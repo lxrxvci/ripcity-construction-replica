@@ -1,3 +1,12 @@
+/**
+ * NE 36th primary suite project page (the only route nested under /projects/).
+ *
+ * Why it exists: project proof page for the bathroom/suite remodel.
+ * How it works: Ne36thHeroSection + Ne36thGallerySection (inline);
+ * WebPage JSON-LD.
+ * How to change it: copy and images inline in the two sections. New
+ * project pages can follow this pattern or go top-level like the others.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, Footer } from "@/components/Footer";

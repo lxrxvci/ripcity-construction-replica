@@ -1,3 +1,11 @@
+/**
+ * Project write-up block on the SW 78th ADU page.
+ *
+ * Why it exists: the narrative details of the build between hero and
+ * gallery.
+ * How it works: inline paragraphs; not portal-stamped.
+ * How to change it: edit copy here.
+ */
 import { cn } from "@/lib/utils";
 
 interface Sw78thProjectTextSectionProps {

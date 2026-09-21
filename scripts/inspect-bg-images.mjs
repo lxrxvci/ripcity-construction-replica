@@ -1,3 +1,13 @@
+/**
+ * One-off inspector: lists CSS background-image URLs on the original homepage.
+ *
+ * Why it exists: Squarespace heroes are often CSS backgrounds, which
+ * <img>-only inventories miss.
+ * How it works: Playwright loads the original homepage and prints
+ * computed background-image URLs as JSON.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 
 async function main() {

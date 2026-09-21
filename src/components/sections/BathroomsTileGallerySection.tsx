@@ -1,3 +1,11 @@
+/**
+ * Photo gallery on /bathrooms-tile.
+ *
+ * Why it exists: visual proof of bathroom and tile work.
+ * How it works: inline image array with captions in a responsive layout;
+ * not portal-stamped.
+ * How to change it: edit the image array here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import imageCaptions from "../../../docs/research/image-captions.json";

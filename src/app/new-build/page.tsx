@@ -1,3 +1,12 @@
+/**
+ * New build service page (/new-build).
+ *
+ * Why it exists: service keyword page for ground-up builds and additions.
+ * How it works: ServiceIntroSection + NewBuildGallerySection; Service +
+ * WebPage JSON-LD.
+ * How to change it: intro copy via props here; gallery images inline in
+ * the section.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";

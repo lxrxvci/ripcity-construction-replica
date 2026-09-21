@@ -1,3 +1,11 @@
+/**
+ * Hero for /se-portland-kitchen-home-renovation.
+ *
+ * Why it exists: opens the SE Portland kitchen project page.
+ * How it works: background photo + headline/intro, inline copy; not
+ * portal-stamped.
+ * How to change it: edit copy/images here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

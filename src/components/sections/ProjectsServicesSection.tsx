@@ -1,3 +1,14 @@
+/**
+ * Six-service grid with images and links, on the projects page flow.
+ *
+ * Why it exists: cross-sells every service from the portfolio area with
+ * visual cards.
+ * How it works: maps an inline services array (title, description, image,
+ * href) to linked cards; not portal-stamped (predates the port; the
+ * stamped counterpart for the projects page is ServicesListSection).
+ * How to change it: edit the services array here; hrefs must match the
+ * service page routes.
+ */
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";

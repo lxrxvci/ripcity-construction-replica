@@ -1,3 +1,14 @@
+/**
+ * Tests for the FAQ extractor in lib/faq.ts.
+ *
+ * Why it exists: the FAQPage schema is only as honest as this parser; the
+ * section-marker convention (exact "FAQ" h2, h3 questions, p answers,
+ * next-h2 boundary) is pinned down here.
+ * How it works: node:test + node:assert against parseFaqEntries; run with
+ * `node --test src/lib/faq.test.ts` (type stripping, no dependencies).
+ * How to change it: extend alongside lib/faq.ts whenever the parsing
+ * rules change.
+ */
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { parseFaqEntries } from "./faq.ts";

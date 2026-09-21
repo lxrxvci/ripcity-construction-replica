@@ -1,3 +1,13 @@
+/**
+ * Fetches the live <title> of each original-site page for the title audit.
+ *
+ * Why it exists: update-titles.mjs needed the original titles; this
+ * collected them.
+ * How it works: Playwright Chromium visits each ripcityconstruction.com
+ * path and prints its title.
+ * How to change it: research tooling; re-run only to re-audit the
+ * original site's titles.
+ */
 import { chromium } from "playwright";
 
 const pages = [

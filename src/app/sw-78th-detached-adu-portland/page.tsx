@@ -1,3 +1,11 @@
+/**
+ * SW 78th detached ADU project page.
+ *
+ * Why it exists: project proof page for the detached ADU build.
+ * How it works: Sw78thHeroSection + Sw78thGallerySection +
+ * Sw78thProjectTextSection (inline); WebPage JSON-LD.
+ * How to change it: copy and images inline in the three sections.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, Footer } from "@/components/Footer";

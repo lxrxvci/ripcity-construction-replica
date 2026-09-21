@@ -1,3 +1,11 @@
+/**
+ * Full-viewport hero for /kitchen-remodeling-portland.
+ *
+ * Why it exists: opens the kitchen service page.
+ * How it works: background image + scrim + headline/sub/CTA, inline copy;
+ * not portal-stamped.
+ * How to change it: edit copy and image path here.
+ */
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 

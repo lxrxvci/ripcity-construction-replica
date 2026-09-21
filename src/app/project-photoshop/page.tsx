@@ -1,3 +1,14 @@
+/**
+ * Commercial remodeling page (/project-photoshop) - the tenant-improvement showcase.
+ *
+ * Why it exists: ranks for commercial remodel work; the name survives
+ * from the original site's URL.
+ * How it works: ServiceIntroSection + ProjectPhotoshopGallerySection
+ * (images prop passed from this page) + bottom CTA; Service + WebPage
+ * JSON-LD.
+ * How to change it: the gallery image list lives in this page file;
+ * section copy via ServiceIntroSection props.
+ */
 import type { Metadata } from "next";
 import { readFile } from "fs/promises";
 import { join } from "path";

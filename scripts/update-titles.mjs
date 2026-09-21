@@ -1,3 +1,13 @@
+/**
+ * One-shot codemod that wrote per-route <title> values into the app pages.
+ *
+ * Why it exists: set the search-targeted titles from the original site's
+ * title audit during the port.
+ * How it works: a hardcoded route-to-title map applied over src/app.
+ * How to change it: historical - titles now live in each page's
+ * createMetadata call (values from lib/company PAGE_DESCRIPTIONS). Do not
+ * re-run; edit titles in the page files instead.
+ */
 import fs from "fs";
 import path from "path";
 

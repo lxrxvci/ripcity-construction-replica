@@ -1,3 +1,12 @@
+/**
+ * Kitchen remodeling service page (/kitchen-remodeling-portland).
+ *
+ * Why it exists: the highest-value service keyword page.
+ * How it works: hero + intro + KitchenGallerySection project features
+ * (inline copy/images); Service + WebPage JSON-LD via createServiceSchema.
+ * How to change it: page copy is inline in the section components;
+ * service-level schema fields come from SERVICE_PAGES in lib/company.ts.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";

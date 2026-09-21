@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * Asset downloader for ripcityconstruction.com clone.
+ * Asset downloader used during the original clone of ripcityconstruction.com.
  *
- * What it does:
- *  1. Parses the Squarespace sitemap.
- *  2. Crawls every page with Playwright Chromium.
- *  3. Collects all images, fonts, videos, favicons, and OG/meta images.
- *  4. Deduplicates assets and downloads them in batched parallel requests.
- *  5. Writes a manifest mapping every original URL to its local path.
- *
- * Run with:
- *   node scripts/download-assets.mjs
+ * Why it exists: the replica's public/ images, fonts, videos, and seo
+ * files came from the Squarespace original; this fetched them.
+ * How it works: parses the Squarespace sitemap, crawls every page with
+ * Playwright Chromium, collects images/fonts/videos/favicons/OG images,
+ * deduplicates by content hash, downloads in batched parallel requests,
+ * and writes docs/research/asset-manifest.json mapping original URLs to
+ * local paths. Run: node scripts/download-assets.mjs
+ * How to change it: a one-shot pipeline tool, kept for reproducibility -
+ * not part of the build. Re-run only against a changed source site and
+ * expect public/ churn.
  */
-
 import { chromium } from 'playwright';
 import { promises as fs, createWriteStream } from 'node:fs';
 import path from 'node:path';

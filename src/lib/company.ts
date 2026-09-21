@@ -1,10 +1,29 @@
+/**
+ * Business constants: the single source of truth for NAP, licenses, profiles, and service-page SEO data.
+ *
+ * Why it exists: metadata and JSON-LD across 17 routes must never
+ * disagree about who the business is.
+ * How it works: derives NAP display fields from src/content/site.json
+ * (the portal-managed site collection) and layers on technical constants
+ * (SITE url/domain/og, CONTACT hours, ADDRESS + geo, LICENSES,
+ * SOCIAL_PROFILES/SAME_AS, AREA_SERVED, KNOWS_ABOUT, SERVICE_PAGES per
+ * service keyword page, PAGE_DESCRIPTIONS per route), plus hours
+ * formatters for schema and display.
+ * How to change it: owner-editable NAP changes go in site.json (portal);
+ * technical SEO constants here. A new service page needs a SERVICE_PAGES
+ * and PAGE_DESCRIPTIONS entry.
+ */
 // Verified business data sourced from the original site www.ripcityconstruction.com
-// and Google Business Profile signals. Keep this file as the single source of truth
-// for all NAP, social, and service data used in metadata and JSON-LD.
+// and Google Business Profile signals. Owner-editable NAP display fields live in
+// src/content/site.json (portal CMS collection "site"); this file derives the
+// constants used in metadata and JSON-LD from it and remains the single source
+// of truth for social, service, and technical SEO data.
+
+import site from "@/content/site.json";
 
 export const SITE = {
-  name: "Rip City Construction",
-  legalName: "Rip City Construction & Remodeling LLC",
+  name: site.name,
+  legalName: site.legalName,
   url: "https://www.ripcityconstruction.com",
   domain: "www.ripcityconstruction.com",
   scheme: "https",
@@ -17,9 +36,9 @@ export const SITE = {
 } as const;
 
 export const CONTACT = {
-  telephone: "+1-971-344-3806",
-  telephoneDisplay: "(971) 344-3806",
-  email: "info@ripcityconstruction.com",
+  telephone: site.telephone,
+  telephoneDisplay: site.telephoneDisplay,
+  email: site.email,
   hours: [
     { dayOfWeek: "Monday", opens: "08:00", closes: "17:00" },
     { dayOfWeek: "Tuesday", opens: "08:00", closes: "17:00" },
@@ -30,10 +49,10 @@ export const CONTACT = {
 } as const;
 
 export const ADDRESS = {
-  streetAddress: "7648 SE Hawthorne Blvd",
-  addressLocality: "Portland",
-  addressRegion: "OR",
-  postalCode: "97215",
+  streetAddress: site.streetAddress,
+  addressLocality: site.addressLocality,
+  addressRegion: site.addressRegion,
+  postalCode: site.postalCode,
   addressCountry: "US",
   geo: {
     latitude: 45.512128,

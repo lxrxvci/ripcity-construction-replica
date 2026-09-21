@@ -1,3 +1,11 @@
+/**
+ * Clay basement remodel project page (/clay-basement-remodel-portland).
+ *
+ * Why it exists: project proof page for the Clay basement finish.
+ * How it works: ClayBasementHeroSection + ClayBasementGallerySection
+ * (inline); WebPage JSON-LD.
+ * How to change it: copy and images inline in the two sections.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer, CtaFooter } from "@/components/Footer";

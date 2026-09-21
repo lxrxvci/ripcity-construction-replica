@@ -1,3 +1,11 @@
+/**
+ * Hawthorne addition project page (/southeast-hawthorne-addition).
+ *
+ * Why it exists: project proof page for the whole-home addition.
+ * How it works: HawthorneHeroSection + HawthorneGallerySection (inline);
+ * WebPage JSON-LD.
+ * How to change it: copy and images inline in the two sections.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, Footer } from "@/components/Footer";

@@ -1,3 +1,11 @@
+/**
+ * Bottom CTA band on /project-photoshop.
+ *
+ * Why it exists: closing conversion ask for commercial inquiries.
+ * How it works: inline heading/body/button to /contact; not
+ * portal-stamped.
+ * How to change it: edit copy here.
+ */
 import { cn } from "@/lib/utils";
 
 interface ProjectPhotoshopBottomCtaSectionProps {

@@ -1,3 +1,11 @@
+/**
+ * Hero for /sw-78th-detached-adu-portland.
+ *
+ * Why it exists: opens the SW 78th ADU project page.
+ * How it works: background photo + headline/intro, inline copy; not
+ * portal-stamped.
+ * How to change it: edit copy/images here.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

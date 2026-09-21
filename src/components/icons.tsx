@@ -1,3 +1,13 @@
+/**
+ * SVG icon components extracted from the original site (Facebook, Instagram, Email, Menu, X, and friends).
+ *
+ * Why it exists: the original Squarespace SVGs, preserved as React
+ * components so the replica matches pixel-for-pixel.
+ * How it works: one exported function per icon, size prop, fill
+ * currentColor, extra SVG props spread through.
+ * How to change it: add icons as components here; keep viewBox/path data
+ * verbatim from the source assets. No content copy lives in icons.
+ */
 import * as React from "react";
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {

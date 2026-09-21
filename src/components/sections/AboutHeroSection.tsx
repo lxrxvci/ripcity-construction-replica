@@ -1,3 +1,15 @@
+/**
+ * About page hero: company story and team framing.
+ *
+ * Why it exists: the /about narrative.
+ * How it works: inline JSX copy and a photo grid replicating the original
+ * site; not portal-stamped (the page-specific story sections were left in
+ * code during the port; only header/footer/home/services/projects sets
+ * are CMS-managed).
+ * How to change it: edit copy here. If the owners need to edit it
+ * regularly, port it to a collection with stamps instead of extending
+ * inline copy.
+ */
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 

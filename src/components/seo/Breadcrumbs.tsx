@@ -1,3 +1,15 @@
+/**
+ * Breadcrumb JSON-LD emitter (schema-only, no visible UI).
+ *
+ * Why it exists: search breadcrumbs without adding a visual bar - the
+ * original design has none and the absolute overlay header would collide
+ * with one.
+ * How it works: builds a BreadcrumbList from items via
+ * createBreadcrumbSchema with absolute SITE.url item URLs and renders it
+ * through JsonLd.
+ * How to change it: pass items=[{name, path}] per page. Do not add
+ * visual rendering here; that is a deliberate design divergence guard.
+ */
 import { SITE } from "@/lib/company";
 import { JsonLd } from "./JsonLd";
 import { createBreadcrumbSchema } from "@/lib/seo";

@@ -1,0 +1,15 @@
+{
+  "cta": {
+    "heading": "Ready to Start Your Remodeling Project?",
+    "body": "From kitchens and bathrooms to ADUs, additions, and basement remodeling, Rip City Construction provides high-quality remodeling services throughout Portland and surrounding areas.",
+    "ctaLabel": "Request a Consultation →",
+    "ctaHref": "/contact",
+    "stats": [
+      { "value": "200+", "sub": "", "label": "Remodeling Projects Completed" },
+      { "value": "14+", "sub": "Years", "label": "remodeling homes" }
+    ],
+    "shieldImage": "/images/Sheild_Image_0d2954ec.png",
+    "shieldAlt": "Serving Portland and surrounding areas"
+  },
+  "rightsReserved": "All rights reserved."
+}

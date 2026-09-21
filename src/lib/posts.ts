@@ -1,3 +1,17 @@
+/**
+ * Blog data layer: typed loader and validator for src/content/posts.json.
+ *
+ * Why it exists: posts publish as pure data appends to posts.json; this
+ * module is the only code that reads the file, so a malformed entry fails
+ * the build here instead of rendering a broken page.
+ * How it works: validates every post against the publish contract (slug
+ * format, YYYY-MM-DD dates, root-relative cover and links, html without
+ * h1/style/class), rejects duplicate slugs, sorts date-desc, and exposes
+ * allPosts(), postBySlug(), and formatPostDate().
+ * How to change it: publish by appending to posts.json (shape documented
+ * in the contract comment below). Changing the contract means updating
+ * validatePost, the Post interface, and docs/CODE_GUIDE.md together.
+ */
 import rawPosts from "@/content/posts.json";
 
 // Publish contract: src/content/posts.json is a single JSON array of posts.

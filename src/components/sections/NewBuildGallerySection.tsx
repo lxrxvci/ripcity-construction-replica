@@ -1,3 +1,11 @@
+/**
+ * Photo gallery on /new-build.
+ *
+ * Why it exists: visual proof of new-build work.
+ * How it works: renders via GalleryGrid from an inline image array; not
+ * portal-stamped.
+ * How to change it: edit the image list at the top of this file.
+ */
 import { GalleryGrid } from "@/components/GalleryGrid";
 import imageCaptions from "../../../docs/research/image-captions.json";
 

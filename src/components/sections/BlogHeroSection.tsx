@@ -1,3 +1,14 @@
+/**
+ * Blog index hero: dark masthead with the blog heading and support line.
+ *
+ * Why it exists: every page opens with a dark band so the absolute
+ * overlay header (dark variant, white text) stays readable.
+ * How it works: renders heading/support passed from the /blog page
+ * (sourced from src/content/blog.json); tokens match the other heroes
+ * (bg-foreground, accent h1).
+ * How to change it: copy edits belong in src/content/blog.json; layout
+ * tweaks here. Keep top padding so the header never overlaps the h1.
+ */
 import { cn } from "@/lib/utils";
 
 interface BlogHeroSectionProps {

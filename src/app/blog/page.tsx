@@ -1,3 +1,16 @@
+/**
+ * /blog index route: heading + support copy, post card grid, empty state.
+ *
+ * Why it exists: the blog landing page; posts render newest-first from
+ * the posts.json data layer (lib/posts.ts).
+ * How it works: createMetadata + CollectionPage/Blog JSON-LD, then
+ * BlogHeroSection and BlogPostGridSection between the global chrome.
+ * Index copy comes from src/content/blog.json and is engine-managed: no
+ * data-cms stamps, per the blog publish contract.
+ * How to change it: index copy in src/content/blog.json ({heading,
+ * support} only); card design in BlogPostGridSection; new posts are data
+ * appends to src/content/posts.json, never edits here.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { CtaFooter, Footer } from "@/components/Footer";

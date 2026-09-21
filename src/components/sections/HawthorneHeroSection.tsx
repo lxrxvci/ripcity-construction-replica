@@ -1,3 +1,11 @@
+/**
+ * Hero for /southeast-hawthorne-addition.
+ *
+ * Why it exists: opens the Hawthorne addition project page.
+ * How it works: background photo + headline/intro, inline copy; not
+ * portal-stamped.
+ * How to change it: edit copy/images here.
+ */
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 

@@ -1,3 +1,13 @@
+/**
+ * One-off inspector: dumps the original homepage CTA image markup.
+ *
+ * Why it exists: traced a specific CTA graphic in the original HTML
+ * during the clone.
+ * How it works: Playwright loads the original homepage and prints the
+ * matching HTML snippet.
+ * How to change it: throwaway research tooling kept for reference; not
+ * part of the build.
+ */
 import { chromium } from "playwright";
 
 async function main() {

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Kitchen Remodeling",
+    "description": "Custom kitchen remodeling in Portland, including cabinetry, countertops, layout improvements, and full renovations built for long-term value.",
+    "image": "/images/Kitchen_Graphic_99ebdb00.png",
+    "href": "/kitchen-remodeling-portland"
+  },
+  {
+    "title": "Bathroom Remodeling",
+    "description": "Bathroom remodeling in Portland with custom tile, showers, vanities, and layout upgrades designed for durability and everyday use.",
+    "image": "/images/ChatGPT_Image_May_5__2026__03_30_40_PM_e5fc8657.png",
+    "href": "/bathrooms-tile"
+  },
+  {
+    "title": "ADU Construction",
+    "description": "ADU construction in Portland, Oregon, including detached units and conversions for rental income, guest space, or multigenerational living.",
+    "image": "/images/ADU_Graphic_724dacc9.png",
+    "href": "/adu-home-additions-portland"
+  },
+  {
+    "title": "Home Additions",
+    "description": "Home additions in Portland designed to expand your living space with seamless design, structural integration, and quality construction.",
+    "image": "/images/Addition_Graphic_9cab53de.png",
+    "href": "/adu-home-additions-portland"
+  },
+  {
+    "title": "Basement Finishing",
+    "description": "Basement remodeling in Portland, turning unfinished space into functional living areas with custom layouts and quality finishes.",
+    "image": "/images/Basement_Graphic_ce30ad11.png",
+    "href": "/basements"
+  },
+  {
+    "title": "Commercial Remodeling",
+    "description": "Commercial remodeling in Portland, including tenant improvements and build-outs designed for durability, efficiency, and long-term performance.",
+    "image": "/images/Commercial_Graphic_389324fa.png",
+    "href": "/project-photoshop"
+  }
+]

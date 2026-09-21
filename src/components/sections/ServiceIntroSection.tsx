@@ -1,3 +1,14 @@
+/**
+ * Prop-driven service intro: eyebrow, title, paragraphs, services link.
+ *
+ * Why it exists: one intro layout shared by the basements,
+ * bathrooms-tile, new-build, and project-photoshop pages.
+ * How it works: renders the eyebrow/title/paragraphs props with an
+ * "Explore All of Our Remodeling Services" link; copy comes from each
+ * page file as props, so it is inline (not portal-stamped).
+ * How to change it: edit the props at the call site in each page. The
+ * shared link label is hardcoded here.
+ */
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 

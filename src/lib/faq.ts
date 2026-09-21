@@ -1,7 +1,17 @@
-// Extracts FAQ entries from a post's clean semantic HTML.
-// Contract: an <h2>FAQ</h2> heading opens the section; each <h3> is a
-// question and the <p> elements that follow it (until the next <h3> or
-// <h2>) are the answer. Anything after the next <h2> is not FAQ content.
+/**
+ * FAQ extractor: pulls question/answer pairs out of a post's html for
+ * FAQPage JSON-LD.
+ *
+ * Why it exists: posts with an <h2>FAQ</h2> section qualify for FAQ
+ * structured data; the section is a content convention, so parsing lives
+ * in one tested place rather than inside the route.
+ * How it works: finds the h2 whose text is exactly "FAQ"
+ * (case-insensitive), reads each following h3 as a question and its <p>
+ * siblings as the answer, and stops at the next h2. Covered by
+ * faq.test.ts (`node --test src/lib/faq.test.ts`).
+ * How to change it: keep it dependency-free over the clean-html contract
+ * enforced in lib/posts.ts; update faq.test.ts in the same change.
+ */
 
 export interface FaqEntry {
   question: string;

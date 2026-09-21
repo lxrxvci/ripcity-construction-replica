@@ -1,3 +1,13 @@
+/**
+ * ADU and home additions service page (/adu-home-additions-portland).
+ *
+ * Why it exists: service keyword page, cross-featuring the SW 78th and
+ * Nixon ADU projects.
+ * How it works: ADUHeroSection + intro + two project feature sections +
+ * ADUGallerySection + bottom CTA (all inline copy); Service + WebPage
+ * JSON-LD.
+ * How to change it: copy/images are inline in the section components.
+ */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";

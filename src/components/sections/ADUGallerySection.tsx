@@ -1,3 +1,12 @@
+/**
+ * Photo gallery on the ADU/additions service page.
+ *
+ * Why it exists: visual proof of ADU/addition work.
+ * How it works: inline image array rendered as a photo grid; not
+ * portal-stamped.
+ * How to change it: edit the image array here (public/images paths + alt
+ * text).
+ */
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";

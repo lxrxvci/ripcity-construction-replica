@@ -1,3 +1,11 @@
+/**
+ * Bottom CTA band on the ADU/additions page.
+ *
+ * Why it exists: closing conversion ask.
+ * How it works: inline heading/body/button to /contact; not
+ * portal-stamped.
+ * How to change it: edit copy here.
+ */
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 

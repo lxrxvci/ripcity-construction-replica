@@ -1,3 +1,14 @@
+/**
+ * Blog index grid: post cards, empty-cover fallback, and empty state.
+ *
+ * Why it exists: the browsable list of posts on /blog.
+ * How it works: maps the Post array (lib/posts.ts) into cards modeled on
+ * ProjectsGridSection; a post with cover "" renders a styled dark
+ * fallback block (tag + title) instead of an image; zero posts renders a
+ * friendly empty state pointing at the projects page.
+ * How to change it: card visuals here. Never needed for a new post; the
+ * grid follows src/content/posts.json.
+ */
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
