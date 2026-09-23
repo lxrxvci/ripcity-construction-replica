@@ -20,7 +20,7 @@ import { createJsonLdGraph,
 
 const pageTitle = "SW 78th Detached ADU Construction | Portland ADU Builder";
 const description =
-  "Explore this detached ADU construction project in Southwest Portland. Rip City Construction built this custom grandmother suite from the ground up, including new utilities, full kitchen, bathroom, bedroom, study, and living space.";
+  "Detached ADU construction project in Southwest Portland by Rip City Construction. A custom grandmother suite with a full kitchen, bathroom, bedroom, and study.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

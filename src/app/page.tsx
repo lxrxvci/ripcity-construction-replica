@@ -1,13 +1,16 @@
 /**
- * Homepage (/): hero, recent projects, services, reviews.
+ * Homepage (/): hero, recent projects, services, reviews, FAQ.
  *
  * Why it exists: the primary ranking and conversion surface.
  * How it works: composes HeroSection, RecentProjectsSection,
- * ServicesSection, ReviewsSection (all portal-stamped), with metadata
- * from PAGE_DESCRIPTIONS.home and a WebPage + OfferCatalog JSON-LD graph.
+ * ServicesSection, ReviewsSection (all portal-stamped), and FaqSection
+ * (engine-managed faq.json), with metadata from PAGE_DESCRIPTIONS.home
+ * and a WebPage + OfferCatalog + FAQPage JSON-LD graph. The FAQPage
+ * schema is built from the same faq.json items FaqSection renders, so
+ * markup and visible copy stay in sync.
  * How to change it: copy and images live in hero.json, sections.json,
- * projects.json, services.json, reviews.json - edit those, not this file.
- * Section order changes happen here.
+ * projects.json, services.json, reviews.json, faq.json - edit those, not
+ * this file. Section order changes happen here.
  */
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
@@ -16,12 +19,14 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { RecentProjectsSection } from "@/components/sections/RecentProjectsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { createJsonLdGraph, createMetadata, createWebPageSchema, createOfferCatalogSchema } from "@/lib/seo";
+import { createFaqPageSchema, createJsonLdGraph, createMetadata, createWebPageSchema, createOfferCatalogSchema } from "@/lib/seo";
 import { PAGE_DESCRIPTIONS } from "@/lib/company";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import faq from "@/content/faq.json";
 
-const pageTitle = "Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction";
+const pageTitle = "Remodeling Contractor in Portland | Rip City Construction";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,
@@ -35,6 +40,13 @@ export default function HomePage() {
   const jsonLd = createJsonLdGraph([
     createWebPageSchema({ path, title: pageTitle, description }),
     createOfferCatalogSchema(),
+    createFaqPageSchema(
+      path,
+      faq.items.map((item) => ({
+        question: item.question,
+        answerHtml: `<p>${item.answer}</p>`,
+      }))
+    ),
   ]);
 
   return (
@@ -47,6 +59,7 @@ export default function HomePage() {
         <RecentProjectsSection />
         <ServicesSection />
         <ReviewsSection />
+        <FaqSection />
         <AboutFooter />
       </main>
       <Footer />

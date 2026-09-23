@@ -20,7 +20,7 @@ import { createJsonLdGraph,
 
 const pageTitle = "NE 36th Primary Suite & Bathroom Remodel | Rip City Construction & Remodeling";
 const description =
-  "View this Northeast Portland primary suite and bathroom remodel by Rip City Construction. Custom walk-in shower, double vanity, custom tile work, walk-in closet, laundry room, and spa-inspired finishes.";
+  "Northeast Portland primary suite and bathroom remodel by Rip City Construction. Walk-in shower, double vanity, tile work, walk-in closet, and laundry room.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

@@ -19,7 +19,7 @@ import { createJsonLdGraph,
 
 const pageTitle = "Southeast Portland Home Addition & Whole Home Remodel";
 const description =
-  "View this Southeast Hawthorne whole home addition and renovation by Rip City Construction. Expanded living spaces, custom primary suite, bathrooms, outdoor entertaining areas, and a complete exterior transformation.";
+  "Southeast Hawthorne whole home addition and renovation by Rip City Construction. Expanded living spaces, a custom primary suite, and outdoor entertaining areas.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

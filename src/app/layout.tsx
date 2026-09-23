@@ -6,10 +6,11 @@
  * src/lib/preview-bridge.ts and is exempt from the header rule).
  * How it works: loads Poppins/Manrope via next/font, sets metadata from
  * SITE/PAGE_DESCRIPTIONS in lib/company (robots noindex unless
- * VERCEL_ENV=production), renders the sitewide schema graph via JsonLd +
- * createGlobalSchema, and injects PREVIEW_BRIDGE as the first child of
- * <body> via a raw <script> (never next/script - it must run before
- * hydration).
+ * VERCEL_ENV=production; Search Console verification meta only when
+ * NEXT_PUBLIC_GSC_VERIFICATION is set), renders the sitewide schema
+ * graph via JsonLd + createGlobalSchema, and injects PREVIEW_BRIDGE as
+ * the first child of <body> via a raw <script> (never next/script - it
+ * must run before hydration).
  * How to change it: global metadata changes go through lib/company.ts;
  * font changes here. Never edit the bridge string here or in
  * preview-bridge.ts - it is vendored byte-identical to the client-porting
@@ -44,7 +45,7 @@ export const generateMetadata = (): Metadata => {
     metadataBase: new URL(SITE.url),
     title: {
       template: "%s | Rip City Construction",
-      default: "Portland Kitchen Remodels, ADUs, and Home Renovations | Rip City Construction",
+      default: "Remodeling Contractor in Portland | Rip City Construction",
     },
     description: PAGE_DESCRIPTIONS.home,
     openGraph: {
@@ -71,6 +72,13 @@ export const generateMetadata = (): Metadata => {
         "max-snippet": -1,
         "max-video-preview": -1,
       },
+    },
+    // Search Console verification token is deploy config, not code:
+    // set NEXT_PUBLIC_GSC_VERIFICATION in Vercel env to emit the meta tag.
+    verification: {
+      ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+        ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+        : {}),
     },
   };
 };
