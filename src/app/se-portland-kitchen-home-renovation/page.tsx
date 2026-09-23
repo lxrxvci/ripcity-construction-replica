@@ -20,7 +20,7 @@ import { createJsonLdGraph,
 
 const pageTitle = "SE Portland Kitchen Remodel & Home Renovation";
 const description =
-  "View this Southeast Portland kitchen and home renovation by Rip City Construction. Custom white oak cabinetry, quartz countertops, handmade ceramic backsplash tile, and a bright, connected living space.";
+  "Southeast Portland kitchen and home renovation by Rip City Construction. Custom white oak cabinetry, quartz countertops, and a handmade ceramic backsplash.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

@@ -22,7 +22,7 @@ const PAGE_URL = "http://www.ripcityconstruction.com/clay-basement-remodel-portl
 
 const pageTitle = "Portland Basement Remodel | Finished Basement Renovation & Living Space Addition";
 const description =
-  "View this Southeast Portland basement remodel by Rip City Construction. A finished basement with a new family room, bedroom, bathroom, laundry area, egress window, and modern finishes.";
+  "Southeast Portland basement remodel by Rip City Construction with a new family room, bedroom, bathroom, laundry area, egress window, and modern finishes.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

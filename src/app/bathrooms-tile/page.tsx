@@ -21,7 +21,7 @@ import { createJsonLdGraph,
 
 const pageTitle = "Bathroom Remodeling & Tile Portland";
 const description =
-  "Custom bathroom remodeling and tile installation in Portland, Oregon. Rip City Construction designs and builds durable, beautiful bathrooms with showers, vanities, and tilework.";
+  "Custom bathroom remodeling and tile installation in Portland, Oregon. Showers, vanities, and durable tilework designed and built by Rip City Construction.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

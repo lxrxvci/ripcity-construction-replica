@@ -67,6 +67,13 @@ export const LICENSES = {
   },
 } as const;
 
+// Named on the about page ("Owner & Founder", "owned and operated by
+// Cameron Taylor") - surfaces here for Organization schema E-E-A-T.
+export const FOUNDER = {
+  name: "Cameron Taylor",
+  jobTitle: "Owner & Founder",
+} as const;
+
 export const SOCIAL_PROFILES = {
   facebook: "https://www.facebook.com/pages/Rip-City-Construction-Remodeling/127869977285553",
   instagram: "https://www.instagram.com/ripcityconstruction",
@@ -150,15 +157,15 @@ export type ServiceKey = keyof typeof SERVICE_PAGES;
 export const ALL_SERVICES = Object.values(SERVICE_PAGES);
 
 export const PAGE_DESCRIPTIONS = {
-  home: "Portland remodeling contractor specializing in kitchen remodels, ADUs, bathrooms, and home additions. Quality craftsmanship. Contact Rip City Construction today!",
+  home: "Rip City Construction is a remodeling contractor in Portland, Oregon, specializing in kitchen remodels, ADUs, bathrooms, and home additions since 2012.",
   about:
-    "Rip City Construction is a Portland remodeling contractor owned and operated by Cameron Taylor. Since 2012, we have built our business on quality craftsmanship and referrals.",
+    "Portland remodeling contractor owned and operated by Cameron Taylor. Since 2012, Rip City Construction has built its business on craftsmanship and referrals.",
   services:
-    "Full-service remodeling contractor in Portland, Oregon. Kitchens, bathrooms, ADUs, home additions, basements, and whole-home renovations by Rip City Construction.",
+    "Remodeling contractor in Portland, Oregon. Kitchens, bathrooms, ADUs, home additions, basements, and whole-home renovations by Rip City Construction.",
   contact:
     "Get in touch with Rip City Construction for a free estimate on your next kitchen, bathroom, ADU, addition, or basement remodeling project in Portland, Oregon.",
   projects:
-    "View Rip City Construction's portfolio of kitchen remodels, bathroom renovations, ADUs, home additions, and basement finishing projects throughout Portland, Oregon.",
+    "Portfolio of kitchen remodels, bathroom renovations, ADUs, home additions, and basement finishing projects by Rip City Construction across Portland, Oregon.",
   blog: "Remodeling lessons, permit guidance, and project notes from Rip City Construction kitchen, bathroom, basement, and ADU projects across Portland, Oregon.",
 } as const;
 

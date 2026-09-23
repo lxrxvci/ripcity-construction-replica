@@ -8,7 +8,7 @@ Next.js App Router replica of ripcityconstruction.com, partially ported to the c
 
 | Route | File | Sections (in render order) |
 |---|---|---|
-| `/` | `src/app/page.tsx` | HeroSection, RecentProjectsSection, ServicesSection, ReviewsSection (all stamped) |
+| `/` | `src/app/page.tsx` | HeroSection, RecentProjectsSection, ServicesSection, ReviewsSection (all stamped), FaqSection (engine-managed faq.json) |
 | `/about` | `src/app/about/page.tsx` | AboutHeroSection (inline copy) |
 | `/contact` | `src/app/contact/page.tsx` | ContactFormSection (Formspree, env-gated) |
 | `/services` | `src/app/services/page.tsx` | ServicesHeroSection, ServicesFeaturedSection (stamped) |
@@ -33,12 +33,13 @@ Supporting files:
 | File | Role |
 |---|---|
 | `src/app/layout.tsx` | Fonts, global metadata (noindex outside production), global JSON-LD, and the MANAGED preview-bridge inject (first child of `<body>`) - see Managed files below |
-| `src/app/robots.ts` / `src/app/sitemap.ts` | Crawl gates and the curated sitemap route list |
+| `src/app/robots.ts` / `src/app/sitemap.ts` | Crawl gates and the curated sitemap route list (with image extensions from lib/sitemap-images.ts) |
 | `src/components/Header.tsx` / `Footer.tsx` | Global chrome, stamped from header.json / footer.json / sections.json / site.json |
 | `src/lib/company.ts` | Business constants (NAP derived from site.json + technical SEO data) |
 | `src/lib/posts.ts` | Blog data layer: validates src/content/posts.json at build time, exposes allPosts()/postBySlug() |
 | `src/lib/faq.ts` | FAQ section parser for post html (tested by lib/faq.test.ts), feeds FAQPage JSON-LD |
 | `src/lib/seo.ts` | createMetadata + JSON-LD builders per page type |
+| `src/lib/sitemap-images.ts` | Route-to-images map feeding sitemap.xml image extensions (JSON/captions-derived plus inline gallery lists) |
 | `src/lib/preview-bridge.ts` | MANAGED portal bridge - see Managed files below |
 | `scripts/` | Clone-pipeline and QA tooling from the original extraction (reconnaissance, download-assets, inspect-*, qa-*) - not part of the build |
 
@@ -96,12 +97,13 @@ Shared keys: `site.*` NAP fields render in the Footer and feed lib/company.ts (s
 
 ### Engine-managed collections (NOT portal-registered)
 
-These two files are named here because the docs gate requires every content file in the guide, but they are deliberately not in `SITE_COLLECTIONS` and carry no `data-cms` stamps. Do not register or stamp them; the blog is engine-managed data, edited by commit only.
+These files are named here because the docs gate requires every content file in the guide, but they are deliberately not in `SITE_COLLECTIONS` and carry no `data-cms` stamps. Do not register or stamp them; they are engine-managed data, edited by commit only.
 
 | File | Shape | Fields |
 |---|---|---|
 | `src/content/posts.json` | list | slug, title, description, date (YYYY-MM-DD), updated (YYYY-MM-DD), cover (root-relative or ""), coverAlt, tags[], html (clean semantic HTML: p, h2, h3, ul/li, strong, em, root-relative links; no h1, no styles, no classes) - validated by lib/posts.ts at build time |
 | `src/content/blog.json` | singleton | heading, support only (index masthead copy) |
+| `src/content/faq.json` | singleton | eyebrow, heading, support, items[].{question, answer} - homepage FAQ section copy, rendered by FaqSection and mirrored into the homepage FAQPage schema (answers reuse copy that already exists on the site; never invent claims) |
 
 ## How-to recipes
 

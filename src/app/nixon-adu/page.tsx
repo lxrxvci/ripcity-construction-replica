@@ -18,9 +18,9 @@ import { createJsonLdGraph,
   createMetadata,
   createWebPageSchema} from "@/lib/seo";
 
-const pageTitle = "Nixon ADU | Transform Your Space Today – Get Started Now";
+const pageTitle = "Nixon ADU | Basement ADU Conversion in Milwaukie, Oregon";
 const description =
-  "A complete basement ADU conversion in Milwaukie, Oregon by Rip City Construction. Three bedrooms, two bathrooms, a full kitchen, custom woodwork, and flexible living space.";
+  "Basement ADU conversion in Milwaukie, Oregon by Rip City Construction. Three bedrooms, two bathrooms, a full kitchen, and custom woodwork.";
 
 export const metadata: Metadata = createMetadata({
   title: pageTitle,

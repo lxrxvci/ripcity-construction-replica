@@ -5,8 +5,9 @@
  * graphs so pages stay one createMetadata + one create*Schema call each.
  * How it works: createMetadata builds title/description/canonical/OG from
  * lib/company constants; the create*Schema functions build WebPage,
- * Breadcrumb, Organization, LocalBusiness, WebSite, Service, OfferCatalog,
- * ContactPage, AboutPage, and ImageGallery nodes; createGlobalSchema is
+ * Breadcrumb, Organization (with founder Person), LocalBusiness (with
+ * GBP aggregateRating), WebSite, Service, OfferCatalog, ContactPage,
+ * AboutPage, FAQPage, and ImageGallery nodes; createGlobalSchema is
  * the sitewide graph rendered in layout.tsx; serializeJsonLd stringifies
  * for JsonLd; breadcrumb helpers build item lists.
  * How to change it: extend builders here when a page type needs new
@@ -16,6 +17,7 @@ import type { Metadata } from "next";
 import {
   ADDRESS,
   CONTACT,
+  FOUNDER,
   KNOWS_ABOUT,
   LICENSES,
   PAGE_DESCRIPTIONS,
@@ -161,6 +163,14 @@ export function createOrganizationSchema() {
     image: SITE.logo,
     email: CONTACT.email,
     telephone: CONTACT.telephone,
+    foundingDate: SITE.foundingDate,
+    founder: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: FOUNDER.name,
+      jobTitle: FOUNDER.jobTitle,
+      worksFor: { "@id": `${SITE.url}/#organization` },
+    },
     sameAs: SAME_AS,
   };
 }
@@ -195,6 +205,12 @@ export function createLocalBusinessSchema() {
       longitude: ADDRESS.geo.longitude,
     },
     openingHoursSpecification: hoursToOpeningHoursSpec(),
+    // Keep reviewCount in sync with the live GBP count (19 as of the 2026-09-23 audit).
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "19",
+    },
     areaServed: [
       "Portland OR",
       "SE Portland",

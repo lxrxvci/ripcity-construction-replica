@@ -6,8 +6,9 @@
  * How it works: renders footer.json (cta block: heading, body, ctaLabel,
  * stats[].{value,sub,label}, shieldImage), sections.json about block
  * (eyebrow, heading, paragraphs[], linkLabel, whyHeading, bullets[]), and
- * site.json NAP fields - all stamped; legal line is
- * footer.rightsReserved.
+ * site.json NAP fields - all stamped; the legal line is
+ * footer.rightsReserved plus the Oregon CCB license from lib/company
+ * (technical constant, same source the LocalBusiness schema uses).
  * How to change it: edit footer.json / sections.json / site.json (or via
  * the portal). Do not hardcode contact info here - it must stay in sync
  * with site.json, which lib/company.ts derives schema from.
@@ -16,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { LICENSES } from "@/lib/company";
 import site from "@/content/site.json";
 import footer from "@/content/footer.json";
 import sections from "@/content/sections.json";
@@ -201,6 +203,9 @@ export function Footer() {
           </p>
           <p className="mt-1" data-cms="site.hoursDisplay">
             {site.hoursDisplay}
+          </p>
+          <p className="mt-1">
+            {LICENSES.oregonCcb.propertyID} #{LICENSES.oregonCcb.value}
           </p>
         </address>
         <p className="mt-4">
